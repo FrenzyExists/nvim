@@ -68,7 +68,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Markdown Preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
     " Align markdown tables
-    Plug 'junegunn/vim-easy-align'
+    Plug 'dhruvasagar/vim-table-mode'
     " Better Whitespace
     Plug 'ntpeters/vim-better-whitespace'
     " Multiple Cursors

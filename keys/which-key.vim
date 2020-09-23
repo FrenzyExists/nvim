@@ -53,9 +53,8 @@ let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
-      \ 'n' : [':set nonumber!'          , 'line-numbers'],
-      \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
+      \ 't' : [':TableModeToggle'        , 'remove search highlight'],
       \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
       \ }
 
