@@ -181,7 +181,6 @@ let g:which_key_map.t = {
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'l' : [':FloatermNew --wintype=normal --height=6'       , 'lower-terminal'],
       \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
