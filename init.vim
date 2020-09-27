@@ -4,7 +4,6 @@
 " _/ // / / / / /__| |/ / / / / / / /
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
-
 " General Settings
 if !exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
@@ -23,16 +22,14 @@ else
   " Themes
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/theme.vim
-  source $HOME/.config/nvim/themes/myline.vim
+  source $HOME/.config/nvim/themes/airline.vim
 
   " Plugin Configuration
   source $HOME/.config/nvim/keys/which-key.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
-  source $HOME/.config/nvim/plug-config/sneak.vim
   source $HOME/.config/nvim/plug-config/coc.vim
   source $HOME/.config/nvim/plug-config/goyo.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
-  source $HOME/.config/nvim/plug-config/start-screen.vim
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/floaterm.vim
   source $HOME/.config/nvim/plug-config/vista.vim

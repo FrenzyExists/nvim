@@ -20,14 +20,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Convert binary, hex, etc..
     Plug 'glts/vim-radical'
     " Sneak
-    Plug 'justinmk/vim-sneak'
+    " Plug 'justinmk/vim-sneak'
     " Surround
     Plug 'tpope/vim-surround'
     " Have the file system follow you around
     Plug 'airblade/vim-rooter'
     " auto set indent settings **CHANGE TO OLD ONE
     Plug 'Yggdroot/indentLine'
-    Plug 'zxqfl/tabnine-vim'
+    " Plug 'zxqfl/tabnine-vim'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Cool Icons
@@ -47,8 +47,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     " Terminal
     Plug 'voldikss/vim-floaterm'
-    " Start Screen
-    Plug 'mhinz/vim-startify'
     " Vista
     Plug 'liuchengxu/vista.vim'
     " See what keys do like in emacs
@@ -57,9 +55,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     " Snippets
     Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
     " Find and replace
     Plug 'ChristianChiarulli/far.vim'
+    " tags
     Plug 'AndrewRadev/tagalong.vim'
     " async tasks
     Plug 'skywind3000/asynctasks.vim'
