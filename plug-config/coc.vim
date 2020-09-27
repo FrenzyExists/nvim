@@ -12,7 +12,6 @@
     \ 'coc-floaterm',
     \ 'coc-html',
     \ 'coc-css',
-    \ 'coc-emoji',
     \ 'coc-cssmodules',
     \ 'coc-yaml',
     \ 'coc-python',
@@ -179,7 +178,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Define Error Symbols and colors
 let g:coc_status_warning_sign = ''
 let g:coc_status_error_sign = ''
-hi CocWarningSign ctermfg=blue 
+hi CocWarningSign ctermfg=blue
 hi CocErrorSign ctermfg=red
 hi CocInfoSign ctermfg=yellow
 hi CocHintSign ctermfg=green

@@ -1,1 +1,1 @@
-source /Users/jordy/.config/nvim/themes/pywal.vim
+source /Users/jordy/.config/nvim/themes/gruvbox.vim
