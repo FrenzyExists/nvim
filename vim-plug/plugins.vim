@@ -19,8 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'preservim/nerdcommenter'
     " Convert binary, hex, etc..
     Plug 'glts/vim-radical'
-    " Sneak
-    " Plug 'justinmk/vim-sneak'
     " Surround
     Plug 'tpope/vim-surround'
     " Have the file system follow you around
@@ -28,6 +26,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " auto set indent settings **CHANGE TO OLD ONE
     Plug 'Yggdroot/indentLine'
     " Plug 'zxqfl/tabnine-vim'
+    "Github
+    Plug 'tpope/vim-fugitive'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Cool Icons

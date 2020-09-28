@@ -22,7 +22,7 @@ else
   " Themes
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/theme.vim
-  source $HOME/.config/nvim/themes/airline.vim
+  source $HOME/.config/nvim/themes/myline.vim
 
   " Plugin Configuration
   source $HOME/.config/nvim/keys/which-key.vim

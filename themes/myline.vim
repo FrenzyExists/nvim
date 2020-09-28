@@ -2,8 +2,6 @@
 "Airline   "
 """"""""""""
 "main settings
-" let g:airline_theme='wpgtk'
-let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 let g:airline_skip_empty_sections = 1
@@ -50,8 +48,6 @@ let g:airline#extensions#branch#format = 2
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_unite = 1
 let g:webdevicons_enable_denite = 1
-let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_vimfiler = 1
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1

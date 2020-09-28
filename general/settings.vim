@@ -14,6 +14,7 @@ set autoindent                          " Good auto indent
 set smartindent                         " Makes indenting smart
 set shiftround
 set number                              " Line numbers
+set relativenumber
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
@@ -27,11 +28,11 @@ set noswapfile
 set nohlsearch
 filetype plugin indent on
 
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+" augroup numbertoggle
+  " autocmd!
+  " autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  " autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" augroup END
 
 augroup specify_filetype
     autocmd!
