@@ -1,1 +1,5 @@
-# nvim
+| NVIM Preview           |
+|------------------------|
+| ![Nvim](./preview.png) |
+
+
