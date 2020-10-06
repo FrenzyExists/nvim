@@ -39,7 +39,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
-let g:which_key_map['d'] = [ ':Bdelete'                           , 'delete buffer']
+let g:which_key_map['d'] = [ ':bd'                                , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':GFiles'                            , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
@@ -63,7 +63,7 @@ let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '1' : ['b1'        , 'buffer 1'],
       \ '2' : ['b2'        , 'buffer 2'],
-      \ 'd' : [':Bdelete'  , 'delete-buffer'],
+      \ 'd' : [':bd'       , 'delete-buffer'],
       \ 'f' : ['bfirst'    , 'first-buffer'],
       \ 'h' : ['Startify'  , 'home-buffer'],
       \ 'l' : ['blast'     , 'last-buffer'],
@@ -78,6 +78,25 @@ let g:which_key_map.r = {
       \ 'b' : [':Farr --source=vimgrep'    , 'buffer'],
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
       \ 'r' : [':Fargo'                    , 'Replace']
+      \ }
+
+" g is for git
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 'a' : [':Git add .'                        , 'add all'],
+      \ 'A' : [':Git add %'                        , 'add current'],
+      \ 'b' : [':Git blame'                        , 'blame'],
+      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'c' : [':Git commit'                       , 'commit'],
+      \ 'd' : [':Git diff'                         , 'diff'],
+      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'g' : [':GGrep'                            , 'git grep'],
+      \ 'h' : [':diffget //3'                      , 'conflict get left'],
+      \ 'l' : [':diffget //2'                      , 'conflict get right'],
+      \ 'L' : [':Git log'                          , 'log'],
+      \ 'p' : [':Git push'                         , 'push'],
+      \ 'P' : [':Git pull'                         , 'pull'],
+      \ 's' : [':Gstatus'                          , 'status'],
       \ }
 
 " k is for task
