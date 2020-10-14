@@ -103,7 +103,7 @@ let g:which_key_map.g = {
 let g:which_key_map.k = {
       \ 'name' : '+task' ,
       \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
-      \ 'C' : [':FloatermNew make clean'      , 'make clean'],
+      \ 'C' : [':make clean'                  , 'make clean'],
       \ 'b' : [':AsyncTask project-build'     , 'build project'],
       \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
       \ 'f' : [':AsyncTaskFzf'                , 'find task'],
