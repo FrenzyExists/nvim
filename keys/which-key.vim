@@ -39,7 +39,9 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
-let g:which_key_map['d'] = [ ':bd'                                , 'delete buffer']
+let g:which_key_map['q'] = [ ':wqa!'                              , 'save and quit' ]
+let g:which_key_map['w'] = [ ':w!'                                , 'write' ]
+let g:which_key_map['m'] = [ ':MaximizerToggle'                   , 'maximize' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':GFiles'                            , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
@@ -54,7 +56,7 @@ let g:which_key_map.a = {
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
-      \ 't' : [':TableModeToggle'        , 'remove search highlight'],
+      \ 't' : [':TableModeToggle'        , 'toggle table mode'],
       \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
       \ }
 
@@ -72,12 +74,19 @@ let g:which_key_map.b = {
       \ '?' : ['Buffers'   , 'fzf-buffer'],
       \ }
 
-" f is for find and replace
-let g:which_key_map.r = {
-      \ 'name' : '+replace' ,
-      \ 'b' : [':Farr --source=vimgrep'    , 'buffer'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
-      \ 'r' : [':Fargo'                    , 'Replace']
+let g:which_key_map.d = {
+      \ 'name' : '+Debugger' ,
+      \ 'd' : [':call vimspector#Launch()'                            , 'launch vimspector'],
+      \ 'e' : [':call vimspector#Reset()'                             , 'exit vimspector'],
+      \ 'rc' : ['<Plug>VimspectorRunToCursor'                         , 'run to cursor'],
+      \ 'l' : ['<Plug>VimspectorStepInto'                             , 'step'],
+      \ 'j' : ['<Plug>VimspectorStepOver'                             , 'step over'],
+      \ 'k' : ['<Plug>VimspectorStepOut'                              , 'step Out'],
+      \ 'h' : ['<Plug>VimspectorRestart'                              , 'restart'],
+      \ 'c' : ['<Plug>VimspectorContinue'                             , 'continue'],
+      \ 'bp' : ['<Plug>VimspectorToggleBreakpoint'                    , 'breakpoint'],
+      \ 'cbp' : ['<Plug>VimspectorToggleConditionalBreakpoint'        , 'conditional breakpoint'],
+      \ '?' : ['Buffers'   , 'fzf-buffer'],
       \ }
 
 " g is for git
@@ -166,8 +175,7 @@ let g:which_key_map.l = {
       \ 'b' : [':CocNext'                            , 'next action'],
       \ 'B' : [':CocPrev'                            , 'prev action'],
       \ 'c' : [':CocList commands'                   , 'commands'],
-      \ 'd' : ['<Plug>(coc-definition)'              , 'definition'],
-      \ 'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
+      \ 'd' : [':call vimspector#Launch()'           , 'vimspector'],
       \ 'e' : [':CocList extensions'                 , 'extensions'],
       \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
       \ 'F' : ['<Plug>(coc-format)'                  , 'format'],
@@ -224,3 +232,4 @@ let g:which_key_map.t = {
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
+
