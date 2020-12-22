@@ -13,11 +13,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'asvetliakov/vim-easymotion'
   else
     Plug 'puremourning/vimspector'
+    Plug 'junegunn/limelight.vim'
     Plug 'szw/vim-maximizer'
-    Plug 'dylanaraps/wal.vim'
-    Plug 'deviantfero/wpgtk.vim'
-    Plug 'morhetz/gruvbox'
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'sainnhe/gruvbox-material'
+    Plug '/Users/atidyshirt/Documents/Files/Repos/salvation-vim'
+    Plug 'tpope/vim-repeat'
+    Plug 'arecarn/vim-spell-utils'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'
     Plug 'airblade/vim-rooter'
@@ -39,7 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'AndrewRadev/tagalong.vim'
     Plug 'skywind3000/asynctasks.vim'
     Plug 'skywind3000/asyncrun.vim'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'ntpeters/vim-better-whitespace'
   endif

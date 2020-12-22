@@ -1,5 +1,3 @@
-" enable tabline
-" let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#left_sep = ''
 " let g:airline#extensions#tabline#left_alt_sep = ''
 " let g:airline#extensions#tabline#right_sep = ''
@@ -22,6 +20,8 @@ let g:airline#extensions#coc#enabled = 1
 " Just show the file name
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+let g:airline_theme = 'gruvbox-material'
+
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
@@ -37,7 +37,7 @@ let g:airline_section_c = airline#section#create([''])
 let g:airline_section_z = airline#section#create(['linenr'])
 
 " Switch to your current theme
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'gruvbox-material'
 
 " Always show tabs
 set showtabline=2

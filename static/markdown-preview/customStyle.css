@@ -1,7 +1,7 @@
-/* @import url("file:///home/jordy/.config/nvim/configs/colors.css"); */
+@import url("file:///home/jordy/.config/nvim/configs/colors.css");
 
-body { 
-  background-color: var(--background); 
+body {
+  background-color: var(--background);
   --color10: #cc241d;
   --color4: #b8bb26;
   --color3: #d79921;
@@ -361,7 +361,7 @@ body {
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: var(--color3) !important; /* Color of function title */ 
+  color: var(--color3) !important; /* Color of function title */
   font-weight: bold;
 }
 
@@ -371,7 +371,7 @@ body {
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: var(--color2) !important; /* Color of class title */ 
+  color: var(--color2) !important; /* Color of class title */
   font-weight: bold;
 }
 

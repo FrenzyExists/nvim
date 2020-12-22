@@ -20,7 +20,7 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=300                      " Faster completion
-set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set noswapfile
 set nohlsearch
@@ -34,6 +34,9 @@ set shortmess=aFc
 
 filetype plugin indent on
 
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 " augroup numbertoggle
   " autocmd!
   " autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
@@ -46,7 +49,10 @@ augroup specify_filetype
     autocmd BufRead,BufNewFile *.txt set filetype=text
 augroup END
 
+let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
+
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -62,7 +68,6 @@ autocmd FileType text,markdown setlocal spell
 autocmd InsertEnter * set nocul
 autocmd InsertLeave * set cul
 
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set mmp=1300
 " set autochdir                           " Your working directory will always be the same as your working directory
 " set foldcolumn=2                        " Folding abilities

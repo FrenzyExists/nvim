@@ -13,6 +13,8 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
+" Spellcheck last mistake
+
 inoremap  <leader>kC :make program<CR>
 
 if exists('g:vscode')

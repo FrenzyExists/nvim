@@ -4,6 +4,5 @@ if (has('termguicolors'))
   set termguicolors
 endif
 
-colorscheme gruvbox
-
-let g:airline_theme='gruvbox'
+colorscheme gruvbox-material
+set background=dark
