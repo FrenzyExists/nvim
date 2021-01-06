@@ -1,32 +1,3 @@
-  let g:coc_global_extensions = [
-    \ 'coc-snippets',
-    \ 'coc-actions',
-    \ 'coc-sh',
-    \ 'coc-java-debug',
-    \ 'coc-java',
-    \ 'coc-lists',
-    \ 'coc-emmet',
-    \ 'coc-tasks',
-    \ 'coc-pairs',
-    \ 'coc-tsserver',
-    \ 'coc-floaterm',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-cssmodules',
-    \ 'coc-yaml',
-    \ 'coc-python',
-    \ 'coc-ccls',
-    \ 'coc-pyright',
-    \ 'coc-explorer',
-    \ 'coc-svg',
-    \ 'coc-prettier',
-    \ 'coc-vimlsp',
-    \ 'coc-xml',
-    \ 'coc-yank',
-    \ 'coc-json',
-    \ 'coc-marketplace',
-    \ ]
-
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -50,16 +21,30 @@ else
   imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+" set keywordprg=:call\ CocActionAsync('doHover')
+" augroup VimHelp
+"   autocmd!
+"   autocmd Filetype vim,help setlocal keywordprg=:help
+" augroup END
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -87,16 +72,24 @@ augroup end
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-" xmap if <Plug>(coc-funcobj-i)
-" xmap af <Plug>(coc-funcobj-a)
-" omap if <Plug>(coc-funcobj-i)
-" omap af <Plug>(coc-funcobj-a)
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
 
-" Use <TAB> for selections ranges.
-" NOTE: Requires 'textDocument/selectionRange' support from the language server.
-" coc-tsserver, coc-python are the examples of servers that support it.
-" nmap <silent> <TAB> <Plug>(coc-range-select)
-" xmap <silent> <TAB> <Plug>(coc-range-select)
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+" Note coc#float#scroll works on neovim >= 0.4.3 or vim >= 8.2.0750
+nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+
+" NeoVim-only mapping for visual mode scroll
+" Useful on signatureHelp after jump placeholder of snippet expansion
+if has('nvim')
+  vnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#nvim_scroll(1, 1) : "\<C-f>"
+  vnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#nvim_scroll(0, 1) : "\<C-b>"
+endif
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -170,23 +163,3 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-
-"""""""
-"COC  "
-"""""""
-" Define Error Symbols and colors
-let g:coc_status_warning_sign = ''
-let g:coc_status_error_sign = ''
-hi CocWarningSign ctermfg=blue
-hi CocErrorSign ctermfg=red
-hi CocInfoSign ctermfg=yellow
-hi CocHintSign ctermfg=green
-
-" Transparent popup window
-hi! Pmenu ctermbg=black
-hi! PmenuSel ctermfg=2
-hi! PmenuSel ctermbg=0
-
-" Brighter line numbers
-hi! LineNr ctermfg=NONE guibg=NONE
-

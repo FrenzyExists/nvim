@@ -1,22 +1,21 @@
-@import url("file:///home/jordy/.config/nvim/configs/colors.css");
-
 body {
-  background-color: var(--background);
-  --color10: #cc241d;
-  --color4: #b8bb26;
-  --color3: #d79921;
-  --color2: #458588;
-  --color5: #b16286;
-  --color6: #689d6a;
-  --color7: #a89984;
-  --color8: #928374;
-  --color12: #fb4934;
-  --color1: #98971a;
-  --color11: #fabd2f;
-  --color9: #83a598;
-  --color13: #d3869b;
-  --color14: #8ec07c;
-  --color15: #ebdbb2;
+    --background: #282828;
+    --color0: #282828;
+    --color1: #75544C;
+    --color2: #6D6160;
+    --color3: #834E3B;
+    --color4: #866050;
+    --color5: #897670;
+    --color6: #8F827C;
+    --color7: #bab5b7;
+    --color8: #827e80;
+    --color9: #75544C;
+    --color10: #6D6160;
+    --color11: #834E3B;
+    --color12: #866050;
+    --color13: #897670;
+    --color14: #8F827C;
+    --color15: #bab5b7;
 
 }
 

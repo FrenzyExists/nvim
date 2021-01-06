@@ -26,7 +26,8 @@ else
   " Plugin Configuration
   source $HOME/.config/nvim/keys/which-key.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
-  source $HOME/.config/nvim/plug-config/coc.vim
+  source $HOME/.config/nvim/plug-config/coc/coc_extentions.vim
+  source $HOME/.config/nvim/plug-config/coc/coc.vim
   source $HOME/.config/nvim/plug-config/goyo.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
   source $HOME/.config/nvim/plug-config/closetags.vim

@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'puremourning/vimspector'
     Plug 'junegunn/limelight.vim'
     Plug 'szw/vim-maximizer'
+    Plug '9mm/vim-closer'
     Plug 'sainnhe/gruvbox-material'
     Plug '/Users/atidyshirt/Documents/Files/Repos/salvation-vim'
     Plug 'preservim/nerdcommenter'
