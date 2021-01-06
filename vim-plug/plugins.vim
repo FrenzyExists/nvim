@@ -9,16 +9,13 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   if exists('g:vscode')
-    " Easy motion for VSCode
-    " Plug 'asvetliakov/vim-easymotion'
+    Plug 'asvetliakov/vim-easymotion'
   else
     Plug 'puremourning/vimspector'
     Plug 'junegunn/limelight.vim'
     Plug 'szw/vim-maximizer'
     Plug 'sainnhe/gruvbox-material'
     Plug '/Users/atidyshirt/Documents/Files/Repos/salvation-vim'
-    Plug 'tpope/vim-repeat'
-    Plug 'arecarn/vim-spell-utils'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'
     Plug 'airblade/vim-rooter'
@@ -35,6 +32,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     Plug 'liuchengxu/vista.vim'
     Plug 'liuchengxu/vim-which-key'
+    Plug 'metakirby5/codi.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'honza/vim-snippets'
     Plug 'AndrewRadev/tagalong.vim'
@@ -47,7 +45,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 call plug#end()
 
-" Automatically install missing plugins on startup
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q

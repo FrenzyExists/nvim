@@ -24,6 +24,7 @@ set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set noswapfile
 set nohlsearch
+set termguicolors
 
 " Tags
 set autochdir
@@ -63,6 +64,7 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
 autocmd FileType text,markdown setlocal spell
 
 autocmd InsertEnter * set nocul
