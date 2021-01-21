@@ -11,11 +11,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   if exists('g:vscode')
     Plug 'asvetliakov/vim-easymotion'
   else
+    " Themes
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'dylanaraps/wal.vim'
+    Plug 'arcticicestudio/nord-vim'
+    Plug 'dracula/vim'
+
     Plug 'puremourning/vimspector'
     Plug 'junegunn/limelight.vim'
     Plug 'szw/vim-maximizer'
     Plug '9mm/vim-closer'
-    Plug 'sainnhe/gruvbox-material'
     Plug '/Users/atidyshirt/Documents/Files/Repos/salvation-vim'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'

@@ -24,7 +24,6 @@ set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set noswapfile
 set nohlsearch
-set termguicolors
 
 " Tags
 set autochdir
@@ -68,9 +67,6 @@ function! s:align()
 endfunction
 
 autocmd FileType text,markdown setlocal spell
-
-autocmd InsertEnter * set nocul
-autocmd InsertLeave * set cul
 
 " set mmp=1300
 " set autochdir                           " Your working directory will always be the same as your working directory

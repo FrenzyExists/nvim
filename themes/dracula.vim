@@ -8,3 +8,7 @@ endif
 colorscheme dracula
 
 let g:airline_theme='dracula'
+
+autocmd InsertEnter * set nocul
+autocmd InsertLeave * set cul
+

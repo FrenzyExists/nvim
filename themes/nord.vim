@@ -4,7 +4,7 @@ if (has('termguicolors'))
   set termguicolors
 endif
 
-colorscheme gruvbox-material
+colorscheme nord
 set background=dark
 
 autocmd InsertEnter * set nocul

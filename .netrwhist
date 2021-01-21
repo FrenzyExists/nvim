@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/atidyshirt/.git'
 let g:netrw_dirhist_2='/Users/atidyshirt/.config/nvim/static/markdown-preview'
 let g:netrw_dirhist_1='/Users/atidyshirt/.git'
 let g:netrw_dirhist_0='/Users/jordy/Documents/Files/University/ENCE260'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/Users/jordy/Documents/Files/University/ENCE260/Notes'
 let g:netrw_dirhist_6='/Users/jordy/scripts/startpage'
 let g:netrw_dirhist_5='/Users/jordy/Documents/Files/Repos/Farm Simulator Submission/src/main'
 let g:netrw_dirhist_4='/Users/jordy/.config/nvim/vim-plug'
-let g:netrw_dirhist_3='/Users/jordy/.vim'
