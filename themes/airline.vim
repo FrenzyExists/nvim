@@ -36,9 +36,6 @@ let g:airline#extensions#default#layout = [['a', 'c'], ['x', 'z', 'warning', 'er
 let g:airline_section_c = airline#section#create([''])
 let g:airline_section_z = airline#section#create(['linenr'])
 
-" Switch to your current theme
-let g:airline_theme = 'gruvbox-material'
-
 " Always show tabs
 set showtabline=2
 

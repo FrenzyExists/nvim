@@ -1,6 +1,5 @@
 syntax on                           " Enables syntax highlighing
 set nowrap                              " Display long lines as just one line
-set statusline+=%F
 set pumheight=10                        " Makes popup menu smaller
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -24,6 +23,10 @@ set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set noswapfile
 set nohlsearch
+
+" Status line -- Off
+set laststatus=0
+set statusline+=%F
 
 " Tags
 set autochdir
@@ -51,6 +54,7 @@ augroup END
 
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
+let g:goyo_width=120
 
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a

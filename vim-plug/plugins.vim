@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dylanaraps/wal.vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'dracula/vim'
+    Plug 'joshdick/onedark.vim'
 
     Plug 'puremourning/vimspector'
     Plug 'junegunn/limelight.vim'
@@ -32,7 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'voldikss/vim-floaterm'
