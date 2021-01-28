@@ -18,8 +18,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dracula/vim'
     Plug 'joshdick/onedark.vim'
 
+    " Plugins
     Plug 'puremourning/vimspector'
-    Plug 'junegunn/limelight.vim'
     Plug 'szw/vim-maximizer'
     Plug '9mm/vim-closer'
     Plug '/Users/atidyshirt/Documents/Files/Repos/salvation-vim'
@@ -33,7 +33,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'vim-airline/vim-airline'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'voldikss/vim-floaterm'
@@ -41,6 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'liuchengxu/vim-which-key'
     Plug 'metakirby5/codi.vim'
     Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
     Plug 'honza/vim-snippets'
     Plug 'AndrewRadev/tagalong.vim'
     Plug 'skywind3000/asynctasks.vim'

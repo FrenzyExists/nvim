@@ -23,34 +23,35 @@ set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set noswapfile
 set nohlsearch
+let &fcs='eob: '                         " Avoid trailing whitespace
 
 " Status line -- Off
 set laststatus=0
 set statusline+=%F
+set cmdheight=1
 
 " Tags
 set autochdir
 set tags+=./tags;
 set hidden
-set cmdheight=1
 set shortmess=aFc
 
 filetype plugin indent on
 
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
-" augroup numbertoggle
-  " autocmd!
-  " autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  " autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-" augroup END
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 augroup specify_filetype
     autocmd!
     autocmd BufRead,BufNewFile *.md set filetype=markdown
     autocmd BufRead,BufNewFile *.txt set filetype=text
 augroup END
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
@@ -79,5 +80,8 @@ autocmd FileType text,markdown setlocal spell
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+highlight EndOfBuffer ctermfg=None
+
 " You can't stop me
 cmap w!! w !sudo tee %
+
