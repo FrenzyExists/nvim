@@ -3,12 +3,12 @@ set nowrap                              " Display long lines as just one line
 set pumheight=10                        " Makes popup menu smaller
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
-set tabstop=4                           " Insert 2 spaces for a tab
-set shiftwidth=4                        " Change the number of space characters inserted for indentation
+set tabstop=2                           " Insert 2 spaces for a tab
+set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set expandtab
 set smarttab
 set autoindent                          " Good auto indent
-set smartindent                         " Makes indenting smart
+" set smartindent                         " Makes indenting smart
 set shiftround
 set number                              " Line numbers
 set relativenumber

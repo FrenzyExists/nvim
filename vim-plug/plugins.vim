@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
 
     " Plugins
+    Plug 'dart-lang/dart-vim-plugin'
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
     Plug '9mm/vim-closer'
@@ -36,7 +37,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'voldikss/vim-floaterm'
-    Plug 'liuchengxu/vista.vim'
+    " Plug 'liuchengxu/vista.vim'
+    Plug 'preservim/tagbar'
     Plug 'liuchengxu/vim-which-key'
     Plug 'metakirby5/codi.vim'
     Plug 'junegunn/goyo.vim'
