@@ -15,7 +15,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sainnhe/gruvbox-material'
     Plug 'dylanaraps/wal.vim'
     Plug 'arcticicestudio/nord-vim'
-    Plug 'dracula/vim'
     Plug 'joshdick/onedark.vim'
 
     " Plugins
@@ -37,7 +36,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'voldikss/vim-floaterm'
-    " Plug 'liuchengxu/vista.vim'
+    Plug 'mhinz/vim-startify'
     Plug 'preservim/tagbar'
     Plug 'liuchengxu/vim-which-key'
     Plug 'metakirby5/codi.vim'
@@ -47,7 +46,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'AndrewRadev/tagalong.vim'
     Plug 'skywind3000/asynctasks.vim'
     Plug 'skywind3000/asyncrun.vim'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'ntpeters/vim-better-whitespace'
   endif
