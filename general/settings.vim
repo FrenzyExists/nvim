@@ -27,7 +27,7 @@ let &fcs='eob: '                         " Avoid trailing whitespace
 
 " Status line -- Off
 set laststatus=0
-set statusline+=%F
+" set statusline+=%F "get this filename to bugger off
 set cmdheight=1
 
 " Tags
@@ -50,8 +50,8 @@ augroup specify_filetype
     autocmd BufRead,BufNewFile *.txt set filetype=text
 augroup END
 
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+autocmd! User GoyoEnter Limelight | set norelativenumber
+autocmd! User GoyoLeave Limelight! | set relativenumber
 
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
