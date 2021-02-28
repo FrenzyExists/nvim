@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
 
     " Plugins
+    " Plug 'posva/vim-vue'
     Plug 'dart-lang/dart-vim-plugin'
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
