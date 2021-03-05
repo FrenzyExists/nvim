@@ -9,7 +9,8 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   if exists('g:vscode')
-    Plug 'asvetliakov/vim-easymotion'
+    Plug 'ChristianChiarulli/vscode-easymotion'
+    Plug 'machakann/vim-highlightedyank'
   else
     " Themes
     Plug 'sainnhe/gruvbox-material'
@@ -18,12 +19,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
 
     " Plugins
-    " Plug 'posva/vim-vue'
+    Plug 'easymotion/vim-easymotion'
     Plug 'dart-lang/dart-vim-plugin'
+    Plug 'dkarter/bullets.vim'
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
     Plug '9mm/vim-closer'
-    Plug '/Users/atidyshirt/Documents/Files/Repos/salvation-vim'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'
     Plug 'airblade/vim-rooter'

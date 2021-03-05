@@ -119,7 +119,7 @@ let g:which_key_map.k = {
       \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
       \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
       \ 'l' : [':CocList tasks'               , 'list tasks'],
-      \ 'm' : [':FloatermNew make clean && make program', 'make program'],
+      \ 'm' : [':FloattermNew pandoc % -o %<.pdf', 'Build Markdown PDF'],
       \ 'M' : [':AsyncTaskMacro'              , 'macro help'],
       \ 'o' : [':copen'                       , 'open task view'],
       \ 'r' : [':AsyncTask file-run'          , 'run file'],
