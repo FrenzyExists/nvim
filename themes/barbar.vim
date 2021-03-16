@@ -4,7 +4,7 @@ let bufferline = {}
 let bufferline.shadow = v:true
 
 " Enable/disable icons
-let bufferline.icons = v:true
+let bufferline.icons = v:false
 
 " Enables/disable clickable tabs
 "  - left-click: go to buffer
@@ -23,7 +23,7 @@ let bufferline.semantic_letters = v:true
 " New buffer letters are assigned in this order. This order is
 " optimal for the qwerty keyboard layout but might need adjustement
 " for other layouts.
-let bufferline.letters = 
+let bufferline.letters =
   \ 'asdfjkl;ghnmxcbziowerutyqpASDFJKLGHNMXCBZIOWERUTYQP'
 
 let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')

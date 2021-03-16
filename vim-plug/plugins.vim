@@ -43,6 +43,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'stsewd/fzf-checkout.vim'
     Plug 'voldikss/vim-floaterm'
     Plug 'mhinz/vim-startify'
     Plug 'preservim/tagbar'

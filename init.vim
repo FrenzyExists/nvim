@@ -38,7 +38,7 @@ else
   source $HOME/.config/nvim/plug-config/markdown-preview.vim
   source $HOME/.config/nvim/plug-config/indent.vim
   source $HOME/.config/nvim/plug-config/nerd-commenter.vim
-  luafile ~/.config/nvim/themes/galaxyline-config.lua
+  source $HOME/.config/nvim/themes/barbar.vim
 endif
 
 " Add paths to node and python here
