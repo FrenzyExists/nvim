@@ -71,6 +71,12 @@ function! s:align()
   endif
 endfunction
 
+" Set up python for vimR (Mac GUI)
+let g:python3_host_prog = "/usr/local/opt/python@3.9/libexec/bin/python"
+let g:vim_vue_plugin_load_full_syntax = 1
+autocmd FileType vue syntax sync fromstart
+let g:vue_disable_pre_processors=1
+
 autocmd FileType text,markdown setlocal spell
 
 " set mmp=1300
