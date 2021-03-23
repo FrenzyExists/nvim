@@ -66,6 +66,7 @@ let g:which_key_map.b = {
       \ '1' : ['b1'        , 'buffer 1'],
       \ '2' : ['b2'        , 'buffer 2'],
       \ 'd' : [':bd'       , 'delete-buffer'],
+      \ 'c' : [':call CloseAllBuffersButCurrent()', 'close other buffers'],
       \ 'f' : ['bfirst'    , 'first-buffer'],
       \ 'h' : ['Startify'  , 'home-buffer'],
       \ 'l' : ['blast'     , 'last-buffer'],
@@ -226,11 +227,10 @@ let g:which_key_map.t = {
 
  let g:which_key_map.j = {
       \ 'name' : '+jump' ,
-      \ 'D' : ['<Plug>(coc-declaration)'       , 'jump declaration'],
-      \ 'd' : ['<Plug>(coc-definition)'        , 'Jump definition'],
-      \ 'r' : ['<Plug>(coc-references)'        , 'Jump references'],
+      \ 'D' : [':call CocActionAsync("jumpDeclaration", "edit")'       , 'jump declaration'],
+      \ 'd' : [':call CocActionAsync("jumpDefinition", "edit")'        , 'Jump definition'],
+      \ 'r' : [':call CocActionAsync("jumpReferences", "edit")'        , 'Jump references'],
       \}
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
-

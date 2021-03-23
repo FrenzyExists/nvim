@@ -19,8 +19,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better tabline
     Plug 'romgrk/barbar.nvim'
     " Themes
-    Plug 'sainnhe/gruvbox-material'
+    Plug 'gruvbox-community/gruvbox'
     " Plug 'dylanaraps/wal.vim'
+    " Plug 'sainnhe/gruvbox-material'
     " Plug 'arcticicestudio/nord-vim'
     " Plug 'joshdick/onedark.vim'
 
@@ -28,7 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'easymotion/vim-easymotion'
     " Plug 'dart-lang/dart-vim-plugin'
     Plug 'dkarter/bullets.vim'
-    " Plug 'puremourning/vimspector'
+    Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
     " Plug '9mm/vim-closer'
     Plug 'preservim/nerdcommenter'
@@ -51,12 +52,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'metakirby5/codi.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
+    Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     " Plug 'AndrewRadev/tagalong.vim'
     Plug 'skywind3000/asynctasks.vim'
     Plug 'skywind3000/asyncrun.vim'
-    " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'ntpeters/vim-better-whitespace'
   endif
