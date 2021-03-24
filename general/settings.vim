@@ -26,7 +26,7 @@ set nohlsearch
 let &fcs='eob: '                         " Avoid trailing whitespace
 
 " Status line -- Off
-set laststatus=0
+" set laststatus=0
 " set statusline+=%F "get this filename to bugger off
 set cmdheight=1
 
@@ -58,18 +58,18 @@ let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | l
 let g:goyo_width=120
 
 
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+" inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
-function! s:align()
-  let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
-endfunction
+" function! s:align()
+  " let p = '^\s*|\s.*\s|\s*$'
+  " if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    " let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    " let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    " Tabularize/|/l1
+    " normal! 0
+    " call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  " endif
+" endfunction
 
 " Set up python for vimR (Mac GUI)
 let g:python3_host_prog = "/usr/local/opt/python@3.9/libexec/bin/python"
