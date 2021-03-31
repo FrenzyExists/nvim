@@ -21,12 +21,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'romgrk/barbar.nvim'
     " Themes
     Plug 'gruvbox-community/gruvbox'
-    " Plug 'dylanaraps/wal.vim'
-    " Plug 'sainnhe/gruvbox-material'
-    " Plug 'arcticicestudio/nord-vim'
-    " Plug 'joshdick/onedark.vim'
+    Plug 'dylanaraps/wal.vim'
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'arcticicestudio/nord-vim'
 
     " Plugins
+    Plug 'APZelos/blamer.nvim'
+    Plug 'unblevable/quick-scope'
     Plug 'dkarter/bullets.vim'
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'

@@ -132,7 +132,6 @@ let g:which_key_map.k = {
 
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
-      \ 'd' : [':Telescope definitions'                 , 'definitions'],
       \ 'f' : [':Telescope find_files'                  , 'files'],
       \ 'h' : [':Telescope command_history'             , 'history'],
       \ 'i' : [':Telescope media_files'                 , 'media files'],
@@ -140,7 +139,6 @@ let g:which_key_map.s = {
       \ 'M' : [':Telescope man_pages'                   , 'man_pages'],
       \ 'o' : [':Telescope vim_options'                 , 'vim_options'],
       \ 't' : [':Telescope live_grep'                   , 'text'],
-      \ 'r' : [':Telescope registers'                   , 'registers'],
       \ 'l' : [':Telescope git_commits'                 , 'commit log'],
       \ 'w' : [':Telescope file_browser'                , 'buf_fuz_find'],
       \ 'u' : [':Telescope colorscheme'                 , 'colorschemes'],
