@@ -43,7 +43,7 @@ let g:which_key_map['q'] = [ ':wqa!'                              , 'save and qu
 let g:which_key_map['w'] = [ ':w!'                                , 'write' ]
 let g:which_key_map['m'] = [ ':MaximizerToggle'                   , 'maximize' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
-let g:which_key_map['f'] = [ ':GFiles'                            , 'search files' ]
+let g:which_key_map['f'] = [ ':Telescope find_files'              , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
 let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
@@ -85,7 +85,8 @@ let g:which_key_map.d = {
       \ 'k' : ['<Plug>VimspectorStepOut'                              , 'step Out'],
       \ 'h' : ['<Plug>VimspectorRestart'                              , 'restart'],
       \ 'c' : ['<Plug>VimspectorContinue'                             , 'continue'],
-      \ 'bp' : ['<Plug>VimspectorToggleBreakpoint'                    , 'breakpoint'],
+      \ 'b' : [':call vimspector#ToggleBreakpoint()'                  , 'breakpoint'],
+      \ 'cb' : [':call vimspector#ClearBreakpoints()'                 , 'clear breakpoints'],
       \ 'cbp' : ['<Plug>VimspectorToggleConditionalBreakpoint'        , 'conditional breakpoint'],
       \ '?' : ['Buffers'   , 'fzf-buffer'],
       \ }
@@ -96,15 +97,14 @@ let g:which_key_map.g = {
       \ 'a' : [':Git add .'                        , 'add all'],
       \ 'A' : [':Git add %'                        , 'add current'],
       \ 'b' : [':GitBlameToggle'                   , 'blame'],
-      \ 'B' : [':GBrowse'                          , 'browse'],
-      \ 'c' : [':GCheckout'                        , 'checkout branch'],
+      \ 'c' : [':Telescope git_branches'           , 'checkout branch'],
       \ 'C' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Git diff'                         , 'diff'],
       \ 'D' : [':Gdiffsplit'                       , 'diff split'],
-      \ 'g' : [':GGrep'                            , 'git grep'],
+      \ 'g' : [':Telescope git_status'             , 'git status'],
       \ 'h' : [':diffget //2'                      , 'conflict get left'],
       \ 'l' : [':diffget //3'                      , 'conflict get right'],
-      \ 'L' : [':Git log'                          , 'log'],
+      \ 'L' : [':Telescope git_commits'            , 'commit log'],
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 's' : [':Gstatus'                          , 'status'],
@@ -130,32 +130,20 @@ let g:which_key_map.k = {
       \ }
       " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
 
-" s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
-      \ '/' : [':History/'              , 'history'],
-      \ ';' : [':Commands'              , 'commands'],
-      \ 'a' : [':Ag'                    , 'text Ag'],
-      \ 'b' : [':BLines'                , 'current buffer'],
-      \ 'B' : [':Buffers'               , 'open buffers'],
-      \ 'c' : [':Commits'               , 'commits'],
-      \ 'C' : [':BCommits'              , 'buffer commits'],
-      \ 'f' : [':Files'                 , 'files'],
-      \ 'g' : [':GFiles'                , 'git files'],
-      \ 'G' : [':GFiles?'               , 'modified git files'],
-      \ 'h' : [':History'               , 'file history'],
-      \ 'H' : [':History:'              , 'command history'],
-      \ 'l' : [':Lines'                 , 'lines'] ,
-      \ 'm' : [':Marks'                 , 'marks'] ,
-      \ 'M' : [':Maps'                  , 'normal maps'] ,
-      \ 'p' : [':Helptags'              , 'help tags'] ,
-      \ 'P' : [':Tags'                  , 'project tags'],
-      \ 's' : [':CocList snippets'      , 'snippets'],
-      \ 't' : [':Rg'                    , 'text Rg'],
-      \ 'T' : [':BTags'                 , 'buffer tags'],
-      \ 'w' : [':Windows'               , 'search windows'],
-      \ 'y' : [':Filetypes'             , 'file types'],
-      \ 'z' : [':FZF'                   , 'FZF'],
+      \ 'd' : [':Telescope definitions'                 , 'definitions'],
+      \ 'f' : [':Telescope find_files'                  , 'files'],
+      \ 'h' : [':Telescope command_history'             , 'history'],
+      \ 'i' : [':Telescope media_files'                 , 'media files'],
+      \ 'm' : [':Telescope marks'                       , 'marks'],
+      \ 'M' : [':Telescope man_pages'                   , 'man_pages'],
+      \ 'o' : [':Telescope vim_options'                 , 'vim_options'],
+      \ 't' : [':Telescope live_grep'                   , 'text'],
+      \ 'r' : [':Telescope registers'                   , 'registers'],
+      \ 'l' : [':Telescope git_commits'                 , 'commit log'],
+      \ 'w' : [':Telescope file_browser'                , 'buf_fuz_find'],
+      \ 'u' : [':Telescope colorscheme'                 , 'colorschemes'],
       \ }
 
 let g:which_key_map.S = {
@@ -207,7 +195,7 @@ let g:which_key_map.l = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+toggle' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=10'        , 'console'],
+      \ ';' : [':FloatermNew --wintype=normal --height=12'      , 'console'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],

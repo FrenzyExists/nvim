@@ -38,9 +38,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'stsewd/fzf-checkout.vim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
     Plug 'voldikss/vim-floaterm'
     Plug 'mhinz/vim-startify'
     Plug 'preservim/tagbar'
