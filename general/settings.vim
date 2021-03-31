@@ -44,6 +44,9 @@ filetype plugin indent on
   " autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 " augroup END
 
+" let escape leave insert mode
+imap <ESC> <C-c>
+
 augroup specify_filetype
     autocmd!
     autocmd BufRead,BufNewFile *.md set filetype=markdown
