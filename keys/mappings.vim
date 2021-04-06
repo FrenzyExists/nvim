@@ -34,6 +34,10 @@ else
   inoremap jk <Esc>
   inoremap kj <Esc>
 
+  " paste from last yank (ignore deletes)
+  nmap ,p "0p
+  nmap ,P "0P
+
   " TAB in general mode will move to text buffer
   nnoremap <silent> <TAB> :bnext<CR>
   " SHIFT-TAB will go back

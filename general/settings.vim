@@ -8,7 +8,7 @@ set shiftwidth=2                        " Change the number of space characters 
 set expandtab
 set smarttab
 set autoindent                          " Good auto indent
-" set smartindent                         " Makes indenting smart
+set smartindent                         " Makes indenting smart
 set shiftround
 set number                              " Line numbers
 set relativenumber
@@ -21,9 +21,10 @@ set signcolumn=yes                      " Always show the signcolumn, otherwise 
 set updatetime=300                      " Faster completion
 set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-set noswapfile
 set nohlsearch
 let &fcs='eob: '                         " Avoid trailing whitespace
+set undofile
+set undodir=~/.vim/undo
 
 " Status line -- Off
 " set laststatus=0

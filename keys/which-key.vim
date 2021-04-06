@@ -45,6 +45,7 @@ let g:which_key_map['m'] = [ ':MaximizerToggle'                   , 'maximize' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':Telescope find_files'              , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
+let g:which_key_map['u'] = [ ':MundoToggle'                       , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
 let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
 
@@ -162,7 +163,8 @@ let g:which_key_map.l = {
       \ 'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
       \ 'b' : [':CocNext'                            , 'next action'],
       \ 'B' : [':CocPrev'                            , 'prev action'],
-      \ 'c' : [':CocList commands'                   , 'commands'],
+      \ 'c' : [':Codi'                               , 'enable Codi'],
+      \ 'C' : [':Codi!'                              , 'disale Codi'],
       \ 'd' : [':call vimspector#Launch()'           , 'vimspector'],
       \ 'e' : [':CocList extensions'                 , 'extensions'],
       \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],

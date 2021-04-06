@@ -9,11 +9,8 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   if exists('g:vscode')
-    " Plug 'ChristianChiarulli/vscode-easymotion'
     Plug 'machakann/vim-highlightedyank'
   else
-    " Vue
-    Plug 'storyn26383/vim-vue'
     " Status Line
     Plug 'glepnir/galaxyline.nvim'
     Plug 'kyazdani42/nvim-web-devicons' " lua
@@ -21,11 +18,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'romgrk/barbar.nvim'
     " Themes
     Plug 'gruvbox-community/gruvbox'
-    Plug 'dylanaraps/wal.vim'
-    Plug 'sainnhe/gruvbox-material'
-    Plug 'arcticicestudio/nord-vim'
 
     " Plugins
+    Plug 'justinmk/vim-sneak'
+    Plug 'simnalamburt/vim-mundo'
     Plug 'APZelos/blamer.nvim'
     Plug 'unblevable/quick-scope'
     Plug 'dkarter/bullets.vim'
@@ -39,6 +35,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'metakirby5/codi.vim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
