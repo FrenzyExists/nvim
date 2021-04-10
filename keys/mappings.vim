@@ -14,7 +14,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Spellcheck last mistake
-imap <c-s> <Esc>mp[sa<C-X>s<C-l><ESC>`pa
+imap <c-s> <Esc>mo[sa<C-X>s<C-l><ESC>`oa
 
 inoremap  <leader>kC :make program<CR>
 

@@ -5,6 +5,8 @@ let g:coc_global_extensions = [
   \ 'coc-lua',
   \ 'coc-java-debug',
   \ 'coc-java',
+  \ 'coc-python',
+  \ 'coc-jedi',
   \ 'coc-lists',
   \ 'coc-emmet',
   \ 'coc-tasks',
@@ -24,6 +26,7 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-xml',
   \ 'coc-yank',
+  \ 'coc-vetur',
   \ 'coc-json',
   \ 'coc-marketplace',
   \ ]

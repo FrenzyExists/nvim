@@ -18,7 +18,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'romgrk/barbar.nvim'
     " Themes
     Plug 'gruvbox-community/gruvbox'
-
     " Plugins
     Plug 'justinmk/vim-sneak'
     Plug 'simnalamburt/vim-mundo'
