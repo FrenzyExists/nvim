@@ -26,6 +26,3 @@ set background=dark
 if &term == "screen-256color"
    set t_Co=256
 endif
-
-autocmd InsertEnter * set nocul
-autocmd InsertLeave * set cul
