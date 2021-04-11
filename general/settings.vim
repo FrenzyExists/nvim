@@ -1,5 +1,6 @@
 syntax on                               " Enables syntax highlighing
 set wrap                                " Display long lines as just one line
+set buftype=
 set pumheight=10                        " Makes popup menu smaller
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -16,21 +17,19 @@ set noshowmode                          " We don't need to see things like -- IN
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
-set updatetime=300                      " Faster completion
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set nohlsearch
 let &fcs='eob: '                         " Avoid trailing whitespace
 set undofile
 set undodir=~/.vim/undo
 set cmdheight=1
+set timeout timeoutlen=500 ttimeoutlen=100
 
 " Tags
 set autochdir
 set tags+=./tags;
 set hidden
 set shortmess=aFc
-
-filetype plugin indent on
 
 " let escape leave insert mode
 imap <ESC> <C-c>
@@ -40,10 +39,6 @@ augroup specify_filetype
     autocmd BufRead,BufNewFile *.md set filetype=markdown
     autocmd BufRead,BufNewFile *.txt set filetype=text
 augroup END
-
-" This ensures that COC is quick, and that we still have time to complete actions for vim fugative
-autocmd InsertEnter * set timeoutlen=80
-autocmd InsertLeave * set timeoutlen=1000
 
 autocmd! User GoyoEnter Limelight | set norelativenumber
 autocmd! User GoyoLeave Limelight! | set relativenumber
