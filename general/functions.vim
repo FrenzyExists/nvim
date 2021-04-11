@@ -13,14 +13,16 @@ function! s:todo() abort
     endfor
     break
   endfor
-
   if !empty(entries)
     call setqflist(entries)
     copen
   endif
 endfunction
-
 command! Todo call s:todo()
+
+" Causes quickfixes to autoclose on exit
+autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
+autocmd FileType qf nnoremap <buffer> <ESC> :cclose<CR>
 
 " Turn spellcheck on for markdown files
 augroup auto_spellcheck
@@ -30,7 +32,6 @@ augroup END
 function! CloseAllBuffersButCurrent()
   let curr = bufnr("%")
   let last = bufnr("$")
-
   if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
   if curr < last | silent! execute (curr+1).",".last."bd" | endif
 endfunction
