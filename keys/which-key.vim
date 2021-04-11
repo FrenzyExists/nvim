@@ -1,5 +1,7 @@
 " Leader Key Maps
 
+" TODO: this is a test
+
 " Map leader to which_key
 nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
@@ -36,18 +38,19 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
-let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
-let g:which_key_map['q'] = [ ':wqa!'                              , 'save and quit' ]
-let g:which_key_map['w'] = [ ':w!'                                , 'write' ]
-let g:which_key_map['m'] = [ ':MaximizerToggle'                   , 'maximize' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
-let g:which_key_map['f'] = [ ':Telescope find_files'              , 'search files' ]
-let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
-let g:which_key_map['u'] = [ ':MundoToggle'                       , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
-let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
+let g:which_key_map['.'] = [ ':e $MYVIMRC'                                                           , 'open init' ]
+let g:which_key_map[';'] = [ ':Commands'                                                             , 'commands' ]
+let g:which_key_map['='] = [ '<C-W>='                                                                , 'balance windows' ]
+let g:which_key_map['q'] = [ ':wqa!'                                                                 , 'save and quit' ]
+let g:which_key_map['w'] = [ ':w!'                                                                   , 'write' ]
+let g:which_key_map['m'] = [ ':MaximizerToggle'                                                      , 'maximize' ]
+let g:which_key_map['e'] = [ ':CocCommand explorer'                                                  , 'explorer' ]
+let g:which_key_map['f'] = [ ':Telescope find_files'                                                 , 'search files' ]
+let g:which_key_map['T'] = [ ":Todo"                                                                 , 'Todo list' ]
+let g:which_key_map['h'] = [ '<C-W>s'                                                                , 'split below']
+let g:which_key_map['u'] = [ ':MundoToggle'                                                          , 'undo tree']
+let g:which_key_map['v'] = [ '<C-W>v'                                                                , 'split right']
+let g:which_key_map['z'] = [ 'Goyo'                                                                  , 'zen' ]
 
 " Group mappings
 
@@ -204,7 +207,6 @@ let g:which_key_map.t = {
       \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
       \ 'p' : [':FloatermNew python'                            , 'python'],
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
-      \ 't' : [':FloatermToggle'                                , 'float terminal'],
       \ 'v' : [':TagbarToggle'                                  , 'tag viewer'],
       \ }
 

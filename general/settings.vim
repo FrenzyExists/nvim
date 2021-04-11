@@ -18,7 +18,7 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=100                      " Faster completion
-set timeoutlen=300                      " By default timeoutlen is 1000 ms
+set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set nohlsearch
 let &fcs='eob: '                         " Avoid trailing whitespace
@@ -50,6 +50,9 @@ let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
 let g:goyo_width=120
 let g:python3_host_prog = "/usr/local/opt/python@3.9/libexec/bin/python"
+let g:vim_vue_plugin_load_full_syntax = 1
+autocmd FileType vue syntax sync fromstart
+let g:vue_disable_pre_processors=1
 
 autocmd FileType text,markdown setlocal spell
 
