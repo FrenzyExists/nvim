@@ -1,4 +1,5 @@
 syntax on                               " Enables syntax highlighing
+
 set wrap                                " Display long lines as just one line
 set buftype=
 set pumheight=10                        " Makes popup menu smaller
@@ -40,16 +41,18 @@ augroup specify_filetype
     autocmd BufRead,BufNewFile *.txt set filetype=text
 augroup END
 
-autocmd! User GoyoEnter Limelight | set norelativenumber
-autocmd! User GoyoLeave Limelight! | set relativenumber
-
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
 let g:goyo_width=120
 let g:python3_host_prog = "/usr/local/opt/python@3.9/libexec/bin/python"
+
+" Enable Vue Development
 let g:vim_vue_plugin_load_full_syntax = 1
 autocmd FileType vue syntax sync fromstart
 let g:vue_disable_pre_processors=1
+
+" Neovide setup
+set guifont=FiraCode\ Nerd\ Font\ Mono:h14:style=Medium,Regular
 
 autocmd FileType text,markdown setlocal spell
 
