@@ -11,8 +11,9 @@ nnoremap <leader>nc :call NERDComment(0,"toggle")<cr>
 vnoremap <leader>nc :call NERDComment(1,"toggle")<cr>
 nnoremap <leader>nu :call NERDComment(0,"uncomment")<cr>
 vnoremap <leader>nu :call NERDComment(1,"uncomment")<cr>
-nnoremap <leader>gw :lua require("telescope").extensions.git_worktree.git_worktrees()<cr>
-vnoremap <leader>gw :lua require("telescope").extensions.git_worktree.git_worktrees()<cr>
+
+" loaded after whichkey
+nmap <leader>gw :lua require("telescope").extensions.git_worktree.git_worktrees()<cr>
 
 " Create map to add keys to
 let g:which_key_map =  {}
@@ -114,7 +115,6 @@ let g:which_key_map.g = {
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 's' : [':Gstatus'                          , 'status'],
-      \ 'w' : [':lua require("telescope").extensions.git_worktree.git_worktrees()', 'git worktrees'],
       \ }
 
 " k is for task
