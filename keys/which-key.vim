@@ -11,6 +11,8 @@ nnoremap <leader>nc :call NERDComment(0,"toggle")<cr>
 vnoremap <leader>nc :call NERDComment(1,"toggle")<cr>
 nnoremap <leader>nu :call NERDComment(0,"uncomment")<cr>
 vnoremap <leader>nu :call NERDComment(1,"uncomment")<cr>
+nnoremap <leader>gw :lua require("telescope").extensions.git_worktree.git_worktrees()<cr>
+vnoremap <leader>gw :lua require("telescope").extensions.git_worktree.git_worktrees()<cr>
 
 " Create map to add keys to
 let g:which_key_map =  {}
@@ -43,7 +45,6 @@ let g:which_key_map[';'] = [ ':Commands'                                        
 let g:which_key_map['='] = [ '<C-W>='                                                                , 'balance windows' ]
 let g:which_key_map['q'] = [ ':wqa!'                                                                 , 'save and quit' ]
 let g:which_key_map['w'] = [ ':w!'                                                                   , 'write' ]
-let g:which_key_map['m'] = [ ':MaximizerToggle'                                                      , 'maximize' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'                                                  , 'explorer' ]
 let g:which_key_map['f'] = [ ':Telescope find_files'                                                 , 'search files' ]
 let g:which_key_map['T'] = [ ":Todo"                                                                 , 'todo list' ]
@@ -74,6 +75,7 @@ let g:which_key_map.b = {
       \ 'f' : ['bfirst'    , 'first-buffer'],
       \ 'h' : ['Startify'  , 'home-buffer'],
       \ 'l' : ['blast'     , 'last-buffer'],
+      \ 'm' : [ ':MaximizerToggle', 'maximize' ],
       \ 'n' : ['bnext'     , 'next-buffer'],
       \ 'p' : ['bprevious' , 'previous-buffer'],
       \ '?' : ['Buffers'   , 'fzf-buffer'],
@@ -112,6 +114,7 @@ let g:which_key_map.g = {
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 's' : [':Gstatus'                          , 'status'],
+      \ 'w' : [':lua require("telescope").extensions.git_worktree.git_worktrees()', 'git worktrees'],
       \ }
 
 " k is for task
@@ -157,6 +160,8 @@ let g:which_key_map.S = {
       \ 'S' : [':SSave'           , 'Save Session']   ,
       \ }
 
+
+
 " l is for language server protocol
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
@@ -193,6 +198,13 @@ let g:which_key_map.l = {
       \ 'v' : [':TagbarToggle'                       , 'tag viewer'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
+      \ }
+
+let g:which_key_map.m = {
+      \ 'name' : '+Marks' ,
+      \ 'c' : [':ShowMarksClearAll'         , 'clear marks'] ,
+      \ 'd' : [':ShowMarksClearMark'           , 'delete mark']     ,
+      \ 'v' : [':ShowMarksToggle' , 'visual marks']  ,
       \ }
 
 " t is for terminal

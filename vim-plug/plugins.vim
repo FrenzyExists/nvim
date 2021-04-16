@@ -19,6 +19,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Themes
     Plug 'gruvbox-community/gruvbox'
     " Plugins
+    Plug 'ThePrimeagen/git-worktree.nvim'
+    Plug 'mattn/emmet-vim'
     Plug 'bootleq/ShowMarks'
     Plug 'kien/rainbow_parentheses.vim'
     Plug 'justinmk/vim-sneak'
