@@ -5,7 +5,7 @@ let g:coc_global_extensions = [
   \ 'coc-lua',
   \ 'coc-java-debug',
   \ 'coc-java',
-  \ 'coc-jedi',
+  \ 'coc-pyright',
   \ 'coc-lists',
   \ 'coc-emmet',
   \ 'coc-tsserver',

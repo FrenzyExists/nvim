@@ -12,9 +12,6 @@ vnoremap <leader>nc :call NERDComment(1,"toggle")<cr>
 nnoremap <leader>nu :call NERDComment(0,"uncomment")<cr>
 vnoremap <leader>nu :call NERDComment(1,"uncomment")<cr>
 
-" loaded after whichkey
-nmap <leader>gw :lua require("telescope").extensions.git_worktree.git_worktrees()<cr>
-
 " Create map to add keys to
 let g:which_key_map =  {}
 " Define a separator
@@ -43,16 +40,11 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                                                           , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                                                             , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                                                                , 'balance windows' ]
-let g:which_key_map['q'] = [ ':wqa!'                                                                 , 'save and quit' ]
-let g:which_key_map['w'] = [ ':w!'                                                                   , 'write' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'                                                  , 'explorer' ]
 let g:which_key_map['f'] = [ ':Telescope find_files'                                                 , 'search files' ]
 let g:which_key_map['T'] = [ ":Todo"                                                                 , 'todo list' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                                                , 'split below']
-let g:which_key_map['u'] = [ ':MundoToggle'                                                          , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                                                                , 'split right']
-let g:which_key_map['z'] = [ 'Goyo'                                                                  , 'zen' ]
 
 " Group mappings
 
@@ -135,7 +127,6 @@ let g:which_key_map.k = {
       \ 'p' : [':AsyncTask project-run'       , 'run project'],
       \ 'x' : [':cclose'                      , 'close task view'],
       \ }
-      " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
 
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
@@ -156,7 +147,6 @@ let g:which_key_map.S = {
       \ 'c' : [':SClose'          , 'Close Session']  ,
       \ 'd' : [':SDelete'         , 'Delete Session'] ,
       \ 'l' : [':SLoad'           , 'Load Session']     ,
-      \ 's' : [':Startify'        , 'Start Page']     ,
       \ 'S' : [':SSave'           , 'Save Session']   ,
       \ }
 
@@ -210,15 +200,11 @@ let g:which_key_map.m = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+toggle' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=12'      , 'console'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
-      \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
-      \ 'p' : [':FloatermNew python'                            , 'python'],
-      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ ';' : [':terminal'                                      , 'console'],
+      \ 'f' : [':terminal fzf'                               , 'fzf'],
+      \ 'n' : [':terminal node'                              , 'node'],
+      \ 'N' : [':terminal nnn'                               , 'nnn'],
+      \ 'p' : [':terminal python'                            , 'python'],
       \ 'v' : [':TagbarToggle'                                  , 'tag viewer'],
       \ }
 

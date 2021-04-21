@@ -1,5 +1,7 @@
 syntax on                               " Enables syntax highlighing
 
+set hidden
+set autochdir
 set wrap                                " Display long lines as just one line
 set number                              " Displays the current line number of col"
 set buftype=
@@ -12,55 +14,21 @@ set expandtab
 set smarttab
 set autoindent                          " Good auto indent
 set smartindent                         " Makes indenting smart
-set shiftround
 set relativenumber
 set cursorline                          " Enable highlighting of the current line
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
+set noswapfile
 set nowritebackup                       " This is recommended by coc
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set nohlsearch
-let &fcs='eob: '                         " Avoid trailing whitespace
 set undofile
 set undodir=~/.vim/undo
 set cmdheight=1
 set timeout timeoutlen=200 ttimeoutlen=100
 
 " Tags
-set autochdir
 set tags+=./tags;
-set hidden
-set shortmess=aFc
-
-" let escape leave insert mode
-imap <ESC> <C-c>
-
-augroup specify_filetype
-    autocmd!
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
-    autocmd BufRead,BufNewFile *.txt set filetype=text
-augroup END
-
-let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
-let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
-let g:goyo_width=120
-let g:python3_host_prog = "/usr/local/opt/python@3.9/libexec/bin/python"
-
-" Marks
-let g:showmarks_auto_toggle = []
-let g:showmarks_no_mappings = 1
-let g:showmarks_hlline_lower = 1
-
+"
 " Enable Vue Development
-let g:vim_vue_plugin_load_full_syntax = 1
-autocmd FileType vue syntax sync fromstart
-let g:vue_disable_pre_processors=1
-
-" Neovide setup
-set guifont=FiraCode\ Nerd\ Font:h14:style=Medium,Regular
-
-" Spellcheck
-autocmd FileType text,markdown setlocal spell
-
-" cmap w!! w !sudo tee %
+" autocmd FileType vue syntax sync fromstart
