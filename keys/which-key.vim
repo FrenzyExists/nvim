@@ -187,11 +187,13 @@ let g:which_key_map.l = {
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }
 
+" m for marks
 let g:which_key_map.m = {
       \ 'name' : '+Marks' ,
-      \ 'f' : [':SignatureListBufferMarks'         , 'local marks'] ,
-      \ 'g' : [':SignatureListGlobalMarks'           , 'global marks']     ,
-      \ 'v' : [':SignatureToggleSigns' , 'visual marks']  ,
+      \ 'c' : [':delm! | delm A-Z0-9a-z | SignatureRefresh'         , 'clear marks'],
+      \ 'f' : [':SignatureListBufferMarks'                          , 'local marks'],
+      \ 'g' : [':SignatureListGlobalMarks'                          , 'global marks'],
+      \ 'v' : [':SignatureToggleSigns'                              , 'visual marks'],
       \ }
 
 " t is for terminal
