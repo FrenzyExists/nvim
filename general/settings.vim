@@ -27,8 +27,4 @@ set undodir=~/.vim/undo
 set cmdheight=1
 set timeout timeoutlen=200 ttimeoutlen=100
 
-" Tags
-set tags+=./tags;
-"
-" Enable Vue Development
-" autocmd FileType vue syntax sync fromstart
+filetype plugin indent on

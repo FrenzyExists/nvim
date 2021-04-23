@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Grooooooovbox
   Plug 'gruvbox-community/gruvbox'
+  Plug 'b4skyx/serenade'
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
@@ -30,7 +31,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
   Plug 'metakirby5/codi.vim'
-  Plug 'bootleq/ShowMarks'
+  " Plug 'bootleq/ShowMarks'
+  Plug 'kshenoy/vim-signature'
   Plug 'ntpeters/vim-better-whitespace'
 
   " Completion
@@ -38,7 +40,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'mattn/emmet-vim'
-  Plug 'dkarter/bullets.vim'
   Plug 'preservim/nerdcommenter'
   Plug 'tpope/vim-surround'
   Plug 'dhruvasagar/vim-table-mode'

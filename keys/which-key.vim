@@ -1,7 +1,5 @@
 " Leader Key Maps
 
-" TODO: this is a test
-
 " Map leader to which_key
 nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
@@ -185,16 +183,15 @@ let g:which_key_map.l = {
       \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
       \ 'u' : [':CocListResume'                      , 'resume list'],
       \ 'U' : [':CocUpdate'                          , 'update CoC'],
-      \ 'v' : [':TagbarToggle'                       , 'tag viewer'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }
 
 let g:which_key_map.m = {
       \ 'name' : '+Marks' ,
-      \ 'c' : [':ShowMarksClearAll'         , 'clear marks'] ,
-      \ 'd' : [':ShowMarksClearMark'           , 'delete mark']     ,
-      \ 'v' : [':ShowMarksToggle' , 'visual marks']  ,
+      \ 'f' : [':SignatureListBufferMarks'         , 'local marks'] ,
+      \ 'g' : [':SignatureListGlobalMarks'           , 'global marks']     ,
+      \ 'v' : [':SignatureToggleSigns' , 'visual marks']  ,
       \ }
 
 " t is for terminal

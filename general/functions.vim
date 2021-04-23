@@ -10,6 +10,6 @@ function! CloseAllBuffersButCurrent()
   if curr < last | silent! execute (curr+1).",".last."bd" | endif
 endfunction
 
-" Clear registers
-let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"' | let i=0 | while (i<strlen(regs)) | exec 'let @'.regs[i].'=""' | let i=i+1 | endwhile | unlet regs
+" Enable Vue Development
+autocmd FileType vue syntax sync fromstart
 
