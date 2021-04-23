@@ -102,8 +102,8 @@ let g:which_key_map.g = {
       \ 'h' : [':diffget //2'                      , 'conflict get left'],
       \ 'l' : [':diffget //3'                      , 'conflict get right'],
       \ 'L' : [':Telescope git_commits'            , 'commit log'],
-      \ 'p' : [':Git push'                         , 'push'],
-      \ 'P' : [':Git pull'                         , 'pull'],
+      \ 'P' : [':Git push'                         , 'push'],
+      \ 'p' : [':Git pull'                         , 'pull'],
       \ 's' : [':Gstatus'                          , 'status'],
       \ }
 
