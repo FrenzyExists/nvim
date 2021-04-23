@@ -11,7 +11,7 @@ source $HOME/.config/nvim/general/functions.vim
 source $HOME/.config/nvim/keys/mappings.vim
 
 " Themes
-source $HOME/.config/nvim/themes/gruvbox.vim
+source $HOME/.config/nvim/themes/serenade.vim
 source $HOME/.config/nvim/themes/syntax.vim
 
 " Plugin Configuration
