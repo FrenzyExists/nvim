@@ -26,7 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'atidyshirt/todo.vim'
 
   " Git
-  Plug 'zivyangll/git-blame.vim'
+  Plug 'f-person/git-blame.nvim'
   Plug 'tpope/vim-fugitive'
 
   " Visual
