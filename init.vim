@@ -4,7 +4,7 @@
 " _/ // / / / / /__| |/ / / / / / / /
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
-" Settungs
+" Settings
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/functions.vim
@@ -16,7 +16,6 @@ source $HOME/.config/nvim/themes/syntax.vim
 
 " Plugin Configuration
 source $HOME/.config/nvim/keys/which-key.vim
-source $HOME/.config/nvim/plug-config/kitty.vim
 source $HOME/.config/nvim/plug-config/coc/coc_extentions.vim
 source $HOME/.config/nvim/plug-config/coc/coc.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
