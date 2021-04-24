@@ -11,6 +11,8 @@ if &term == "screen-256color" || &term == "tmux-256color" || &term == "screen" |
     map! <esc>[1;5C <C-Right>
 endif
 
+let g:serenade_enable_italic = 1
+
 colorscheme serenade
 set background=dark
 
