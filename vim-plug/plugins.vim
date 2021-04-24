@@ -26,7 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'atidyshirt/todo.vim'
 
   " Git
-  Plug 'APZelos/blamer.nvim'
+  Plug 'zivyangll/git-blame.vim'
   Plug 'tpope/vim-fugitive'
 
   " Visual
@@ -34,7 +34,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
   Plug 'metakirby5/codi.vim'
-  " Plug 'bootleq/ShowMarks'
   Plug 'kshenoy/vim-signature'
   Plug 'ntpeters/vim-better-whitespace'
 

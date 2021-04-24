@@ -26,6 +26,7 @@ source $HOME/.config/nvim/plug-config/nerd-commenter.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
 source $HOME/.config/nvim/plug-config/indent.vim
+source $HOME/.config/nvim/plug-config/other-plugins.vim
 luafile $HOME/.config/nvim/themes/barbar.lua
 
 " Add paths to node and python here
