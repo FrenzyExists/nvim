@@ -1,5 +1,8 @@
 syntax on                               " Enables syntax highlighing
 
+set title
+let &titlestring='%t - nvim'
+
 set hidden
 set autochdir
 set wrap                                " Display long lines as just one line

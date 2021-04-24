@@ -16,15 +16,16 @@ source $HOME/.config/nvim/themes/syntax.vim
 
 " Plugin Configuration
 source $HOME/.config/nvim/keys/which-key.vim
+source $HOME/.config/nvim/plug-config/kitty.vim
 source $HOME/.config/nvim/plug-config/coc/coc_extentions.vim
 source $HOME/.config/nvim/plug-config/coc/coc.vim
-source $HOME/.config/nvim/plug-config/vim-rooter.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/asynctask.vim
+source $HOME/.config/nvim/plug-config/vim-rooter.vim
+source $HOME/.config/nvim/plug-config/nerd-commenter.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
 source $HOME/.config/nvim/plug-config/indent.vim
-source $HOME/.config/nvim/plug-config/nerd-commenter.vim
-source $HOME/.config/nvim/plug-config/telescope.vim
 luafile $HOME/.config/nvim/themes/barbar.lua
 
 " Add paths to node and python here

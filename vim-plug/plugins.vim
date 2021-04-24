@@ -12,6 +12,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'KaraMCC/vim-streamline'
 
+  " Navigation with Kitty
+  Plug 'knubie/vim-kitty-navigator'
+
   " Better tabline
   Plug 'romgrk/barbar.nvim'
 
