@@ -2,7 +2,7 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
+  " autocmd VimEnter * PlugInstall
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
@@ -30,12 +30,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
 
   " Visual
+  Plug 'godlygeek/tabular'
+  Plug 'plasticboy/vim-markdown'
   Plug 'liuchengxu/vim-which-key'
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
   Plug 'metakirby5/codi.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'ntpeters/vim-better-whitespace'
+  Plug 'kevinhwang91/nvim-bqf' " Quickfix previews
 
   " Completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}

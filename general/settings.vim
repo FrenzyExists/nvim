@@ -1,11 +1,10 @@
 syntax on                               " Enables syntax highlighing
-
+set nocompatible
 set title
-let &titlestring='%t - Vim'
-
+let &titlestring='%t - Vim'             " for kitty/vim keybinds to work, needs to remname to a common title
 set hidden
 set autochdir
-set wrap                                " Display long lines as just one line
+set nowrap                              " Display long lines as just one line
 set number                              " Displays the current line number of col"
 set buftype=
 set pumheight=10                        " Makes popup menu smaller

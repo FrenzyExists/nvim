@@ -17,7 +17,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Spellcheck last mistake
-imap <c-s> <Esc>mo[sa<C-X>s<C-l><ESC>`oa
+imap <c-s> <Esc>ms[sa<C-X>s<C-l><ESC>`sa
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
