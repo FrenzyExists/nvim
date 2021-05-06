@@ -118,7 +118,7 @@ let g:which_key_map.k = {
       \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
       \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
       \ 'l' : [':CocList tasks'               , 'list tasks'],
-      \ 'm' : [':!pandoc notes.md -o notes.pdf --from markdown --template eisvogel && open %<.pdf', 'Build Markdown PDF'],
+      \ 'm' : [':!pandoc % -o %<.pdf --from markdown --template eisvogel && open %<.pdf', 'Build Markdown PDF'],
       \ 'M' : [':AsyncTaskMacro'              , 'macro help'],
       \ 'o' : [':copen'                       , 'open task view'],
       \ 'r' : [':AsyncTask file-run'          , 'run file'],

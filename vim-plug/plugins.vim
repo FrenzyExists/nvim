@@ -13,7 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'KaraMCC/vim-streamline'
 
   " Navigation with Kitty
-  Plug 'knubie/vim-kitty-navigator'
+  " Plug 'knubie/vim-kitty-navigator'
+  Plug 'christoomey/vim-tmux-navigator'
 
   " Better tabline
   Plug 'romgrk/barbar.nvim'
