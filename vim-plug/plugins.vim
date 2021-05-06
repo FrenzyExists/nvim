@@ -30,8 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
 
   " Visual
-  Plug 'godlygeek/tabular'
-  Plug 'plasticboy/vim-markdown'
   Plug 'liuchengxu/vim-which-key'
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
@@ -41,6 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kevinhwang91/nvim-bqf' " Quickfix previews
 
   " Completion
+  Plug 'plasticboy/vim-markdown'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
