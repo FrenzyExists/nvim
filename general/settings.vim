@@ -1,8 +1,9 @@
 syntax on                               " Enables syntax highlighing
 set nocompatible
 set title
+set nofoldenable
 let &titlestring='%t - Vim'             " for kitty/vim keybinds to work, needs to remname to a common title
-set hidden
+" set hidden
 set autochdir
 set nowrap                              " Display long lines as just one line
 set number                              " Displays the current line number of col"
