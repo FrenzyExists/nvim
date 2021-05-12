@@ -13,15 +13,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'KaraMCC/vim-streamline'
 
   " Navigation with Kitty
-  " Plug 'knubie/vim-kitty-navigator'
   Plug 'christoomey/vim-tmux-navigator'
 
   " Better tabline
   Plug 'romgrk/barbar.nvim'
 
-  " Grooooooovbox
+  " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
-  Plug 'b4skyx/serenade'
+  Plug 'rakr/vim-one'
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
