@@ -1,1 +1,1 @@
-source /Users/atidyshirt/.config/nvim/themes/ayulight.vim
+source /Users/atidyshirt/.config/nvim/themes/gruvbox-light.vim

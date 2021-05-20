@@ -15,6 +15,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Navigation with Kitty
   Plug 'christoomey/vim-tmux-navigator'
 
+  " Leetcode
+  Plug 'ianding1/leetcode.vim'
+
   " Better tabline
   Plug 'romgrk/barbar.nvim'
 

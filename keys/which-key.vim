@@ -118,7 +118,7 @@ let g:which_key_map.k = {
       \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
       \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
       \ 'l' : [':CocList tasks'               , 'list tasks'],
-      \ 'm' : [':!pandoc % -o %<.pdf --from markdown --template eisvogel --toc --resource-path %:p:h && open %<.pdf', 'Build Markdown PDF'],
+      \ 'm' : [':!pandoc % -o %<.pdf --from markdown --template eisvogel --listings --toc --resource-path %:p:h && open %<.pdf', 'Build Markdown PDF'],
       \ 'M' : [':AsyncTaskMacro'              , 'macro help'],
       \ 'o' : [':copen'                       , 'open task view'],
       \ 'r' : [':AsyncTask file-run'          , 'run file'],
@@ -187,9 +187,18 @@ let g:which_key_map.l = {
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }
 
+let g:which_key_map.L = {
+      \ 'name' : '+leetcode' ,
+      \ 'L' : [':LeetCodeList'                        , 'list questions'],
+      \ 't' : [':LeetCodeTest'                        , 'test answer'],
+      \ 's' : [':LeetCodeSubmit'                      , 'submit answer'],
+      \ 'r' : [':LeetCodeReset'                       , 'reset answer'],
+      \ 'S' : [':LeetCodeSignIn'                      , 'sign in with browser'],
+      \ }
+
 " m for marks
 let g:which_key_map.m = {
-      \ 'name' : '+Marks' ,
+      \ 'name' : '+marks' ,
       \ 'c' : [':delm! | delm A-Z0-9a-z | SignatureRefresh'         , 'clear marks'],
       \ 'f' : [':SignatureListBufferMarks'                          , 'local marks'],
       \ 'g' : [':SignatureListGlobalMarks'                          , 'global marks'],

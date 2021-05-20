@@ -14,3 +14,10 @@ nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+
+" Leetcode plugin
+let g:leetcode_browser = 'firefox'
+let g:leetcode_solution_filetype = 'python3'
+let g:leetcode_hide_paid_only = 1
+let g:leetcode_hide_topics = 1
+let g:leetcode_hide_companies = 1
