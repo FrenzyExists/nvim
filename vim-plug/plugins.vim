@@ -23,7 +23,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
-  Plug 'rakr/vim-one'
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'

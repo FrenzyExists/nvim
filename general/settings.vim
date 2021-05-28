@@ -30,4 +30,6 @@ set undodir=~/.vim/undo
 set cmdheight=1
 set timeout timeoutlen=200 ttimeoutlen=100
 
+" set guifont="FiraCode Nerd Font Mono:h16"
+
 filetype plugin indent on
