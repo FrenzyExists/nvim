@@ -11,15 +11,21 @@ if &term == "screen-256color" || &term == "tmux-256color" || &term == "screen" |
     map! <esc>[1;5C <C-Right>
 endif
 
-let g:gruvbox_italic = 1
-let g:gruvbox_bold = 1
-let g:gruvbox_italicize_comments = 1
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_sign_column = 'dark0_hard'
-let g:gruvbox_color_column = 'dark0_hard'
-let g:gruvbox_termcolors = 256
+" let g:gruvbox_italic = 1
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italicize_comments = 1
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_sign_column = 'dark0_hard'
+" let g:gruvbox_color_column = 'dark0_hard'
+" let g:gruvbox_termcolors = 256
 
-colorscheme gruvbox
+" Gruvbox material
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_disable_italic_comment = 1
+
+
+colorscheme gruvbox-material
 set background=dark
 
 if &term == "screen-256color"

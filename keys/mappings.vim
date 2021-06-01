@@ -69,3 +69,9 @@ tnoremap <Esc> <C-\><C-n>
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+
+" nerd-comment toggles
+nnoremap <leader>nc :call NERDComment(0,"toggle")<cr>
+vnoremap <leader>nc :call NERDComment(1,"toggle")<cr>
+nnoremap <leader>nu :call NERDComment(0,"uncomment")<cr>
+vnoremap <leader>nu :call NERDComment(1,"uncomment")<cr>

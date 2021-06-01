@@ -15,7 +15,8 @@ source $HOME/.config/nvim/themes/theme.vim
 source $HOME/.config/nvim/themes/syntax.vim
 
 " Plugin Configuration
-source $HOME/.config/nvim/keys/which-key.vim
+" source $HOME/.config/nvim/keys/which-key.vim
+luafile $HOME/.config/nvim/keys/which-key.lua
 source $HOME/.config/nvim/plug-config/coc/coc_extentions.vim
 source $HOME/.config/nvim/plug-config/coc/coc.vim
 source $HOME/.config/nvim/plug-config/telescope.vim

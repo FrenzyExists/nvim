@@ -23,6 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
+  Plug 'sainnhe/gruvbox-material'
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
@@ -32,7 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
 
   " Visual
-  Plug 'liuchengxu/vim-which-key'
+  Plug 'folke/which-key.nvim'
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
   Plug 'metakirby5/codi.vim'
