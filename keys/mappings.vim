@@ -36,9 +36,6 @@ nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
-" Markdown tables alignment
-au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
-
 " Move selected line / block of text in visual mode
 " shift + k to move up
 " shift + j to move down
@@ -47,7 +44,7 @@ xnoremap J :move '>+1<CR>gv-gv
 
 nnoremap <silent> <C-c> <Esc>
 " <TAB>: completion.
-inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -70,8 +67,14 @@ tnoremap <Esc> <C-\><C-n>
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" nerd-comment toggles
-nnoremap <leader>nc :call NERDComment(0,"toggle")<cr>
-vnoremap <leader>nc :call NERDComment(1,"toggle")<cr>
-nnoremap <leader>nu :call NERDComment(0,"uncomment")<cr>
-vnoremap <leader>nu :call NERDComment(1,"uncomment")<cr>
+" LSP mappings
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> ca :Lspsaga code_action<CR>
+nnoremap <silent> K :Lspsaga hover_doc<CR>
+nnoremap <silent> gs :Lspsaga signature_help<CR>
+nnoremap <silent> <C-d> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+nnoremap <silent> <C-u> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+

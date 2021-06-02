@@ -1,13 +1,8 @@
 local wk = require("which-key")
--- As an example, we will the following mappings:
---  1. <leader>fn new file
---  2. <leader>fr show recent files
---  2. <leader>ff find files
-
 wk.register({
-  e = { "<cmd>CocCommand explorer<cr>", "File explorer"},
+  ["/"] = { "<cmd>Commentary<cr>", "Comment"},
+  e = { "<cmd>NvimTreeToggle<cr>", "File explorer"},
   f = { "<cmd>Telescope find_files<cr>", "Find Files"},
-  T = { "<cmd>Todo<cr>", "Todo"},
   h = { "<C-W>s", "Horizontal Split"},
   v = { "<C-W>v", "Vertical Split"},
   a = {
@@ -70,39 +65,24 @@ wk.register({
     l = { "<cmd>Telescope git_commits<cr>", "commit log" },
     u = { "<cmd>Telescope colorscheme<cr>", "colorschemes" },
   },
-  l = {
-    name = "+LSP", -- optional group name
-    a = {'<Plug>(coc-codeaction)'              , 'line action'},
-    A = {'<Plug>(coc-codeaction-selected)'     , 'selected action'},
-    b = {'<cmd>CocNext<cr>'                            , 'next action'},
-    B = {'<cmd>CocPrev<cr>'                            , 'prev action'},
-    c = {'<cmd>Codi<cr>'                               , 'enable Codi'},
-    C = {'<cmd>Codi!<cr>'                              , 'disale Codi'},
-    d = {'<cmd>call vimspector#Launch()<cr>'           , 'vimspector'},
-    e = {'<cmd>CocList extensions<cr>'                 , 'extensions'},
-    f = {'<Plug>(coc-format-selected)'         , 'format selected'},
-    F = {'<Plug>(coc-format)'                  , 'format'},
-    h = {'<Plug>(coc-float-hide)'              , 'hide'},
-    i = {'<Plug>(coc-implementation)'          , 'implementation'},
-    I = {'<cmd>CocList diagnostics<cr>'                , 'diagnostics'},
-    j = {'<Plug>(coc-float-jump)'              , 'float jump'},
-    l = {'<Plug>(coc-codelens-action)'         , 'code lens'},
-    n = {'<Plug>(coc-diagnostic-next)'         , 'next diagnostic'},
-    N = {'<Plug>(coc-diagnostic-next-error)'   , 'next error'},
-    o = {'<Plug>(coc-openlink)'                , 'open link'},
-    O = {'<cmd>CocList outline<cr>'                    , 'outline'},
-    p = {'<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'},
-    P = {'<Plug>(coc-diagnostic-prev-error)'   , 'prev error'},
-    q = {'<Plug>(coc-fix-current)'             , 'quickfix'},
-    r = {'<Plug>(coc-rename)'                  , 'rename'},
-    s = {'<cmd>CocList -I symbols<cr>'                 , 'references'},
-    S = {'<cmd>CocList snippets<cr>'                   , 'snippets'},
-    t = {'<Plug>(coc-type-definition)'         , 'type definition'},
-    u = {'<cmd>CocListResume<cr>'                      , 'resume list'},
-    U = {'<cmd>CocUpdate<cr>'                          , 'update CoC'},
-    z = {'<cmd>CocDisable<cr>'                         , 'disable CoC'},
-    Z = {'<cmd>CocEnable<cr>'                          , 'enable CoC'},
-  },
+    l = {
+        name = "+LSP",
+        a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+        A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
+        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+        i = {"<cmd>LspInfo<cr>", "Info"},
+        l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
+        L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
+        p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
+        q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+        r = {"<cmd>Lspsaga rename<cr>", "Rename"},
+        t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
+        T = {"<cmd>Todo<cr>", "Todo"},
+        x = {"<cmd>cclose<cr>", "Close Quickfix"},
+        s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
+        S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
+    },
   L = {
     name = "+Leetcode", -- optional group name
     L = { "<cmd>LeetCodeList<cr>", "List questions" },
@@ -117,9 +97,6 @@ wk.register({
     f = { "<cmd>SignatureListBufferMarks<cr>", "Local marks" },
     g = { "<cmd>SignatureListGlobalMarks<cr>", "Global marks" },
     v = { "<cmd>SignatureToggleSigns<cr>", "Visual marks" },
-  },
-  n = {
-    name = "+Comment", -- optional group name
   },
   t = {
     name = "+Toggle", -- optional group name

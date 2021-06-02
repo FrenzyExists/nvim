@@ -42,22 +42,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kevinhwang91/nvim-bqf' " Quickfix previews
 
   " Completion
-  Plug 'plasticboy/vim-markdown'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
-  Plug 'mattn/emmet-vim'
-  Plug 'preservim/nerdcommenter'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'kabouzeid/nvim-lspinstall'
+  Plug 'glepnir/lspsaga.nvim'
   Plug 'tpope/vim-surround'
   Plug 'dhruvasagar/vim-table-mode'
+  Plug 'tpope/vim-commentary'
 
   " Debugging
   Plug 'puremourning/vimspector'
 
-  " Telescope
+  " Telescope + File tree
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'kyazdani42/nvim-tree.lua'
 
   " Buffers
   Plug 'szw/vim-maximizer'

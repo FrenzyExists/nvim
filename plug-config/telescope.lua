@@ -1,4 +1,3 @@
-lua << EOF
 require('telescope').setup{
 require('telescope').setup{
   defaults = {
@@ -51,5 +50,3 @@ require('telescope').setup{
 }
 
 }
-EOF
-
