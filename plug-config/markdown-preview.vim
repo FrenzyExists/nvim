@@ -76,7 +76,7 @@ let g:mkdp_preview_options = {
 " let g:mkdp_port = ''
 
 " Contains CSS for markdown + page + higlight
-let g:mkdp_browser = 'Safari'
+let g:mkdp_browser = 'Google Chrome'
 let g:mkdp_markdown_css = '/Users/atidyshirt/.config/nvim/static/markdown-preview/customStyle.css'
 " Trick plugin into hosting colors.css so we get nice themes
 let g:mkdp_highlight_css = '/Users/atidyshirt/.cache/wal/colors.css'
