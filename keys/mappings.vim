@@ -16,17 +16,6 @@ imap <ESC> <C-c>
 vnoremap < <gv
 vnoremap > >gv
 
-" Spellcheck last mistake
-imap <c-s> <Esc>ms[sa<C-X>s<C-l><ESC>`sa
-
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
-" I hate escape more than anything else
-inoremap jk <Esc>
-inoremap kj <Esc>
-
 " paste from last yank (ignore deletes)
 nmap ,p "0p
 nmap ,P "0P
@@ -37,8 +26,6 @@ nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
 " Move selected line / block of text in visual mode
-" shift + k to move up
-" shift + j to move down
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 

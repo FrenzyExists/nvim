@@ -1,6 +1,5 @@
 local wk = require("which-key")
 wk.register({
-  ["/"] = { "<cmd>Commentary<cr>", "Comment"},
   e = { "<cmd>NvimTreeToggle<cr>", "File explorer"},
   f = { "<cmd>Telescope find_files<cr>", "Find Files"},
   h = { "<C-W>s", "Horizontal Split"},
@@ -100,11 +99,9 @@ wk.register({
   },
   t = {
     name = "+Toggle", -- optional group name
-    f = {'<cmd>terminal fzf<cr>'                               , 'fzf'},
+    t = {'<cmd>sp term://zsh<cr>'                              , 'terminal'},
     n = {'<cmd>terminal node<cr>'                              , 'node'},
-    N = {'<cmd>terminal nnn<cr>'                               , 'nnn'},
     p = {'<cmd>terminal python<cr>'                            , 'python'},
-    v = {'<cmd>TagbarToggle<cr>'                               , 'tag viewer'},
   },
   j = {
     name = "+Jump", -- optional group name

@@ -49,6 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-surround'
   Plug 'dhruvasagar/vim-table-mode'
   Plug 'tpope/vim-commentary'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
 
   " Debugging
   Plug 'puremourning/vimspector'
