@@ -105,8 +105,8 @@ wk.register({
   },
   j = {
     name = "+Jump", -- optional group name
-    D = {'<cmd>call CocActionAsync("jumpDeclaration", "edit")<cr>'       , 'jump declaration'},
-    d = {'<cmd>call CocActionAsync("jumpDefinition", "edit")<cr>'        , 'Jump definition'},
-    r = {'<cmd>call CocActionAsync("jumpReferences", "edit")<cr>'        , 'Jump references'},
+    D = {'<cmd>lua vim.lsp.buf.declaration()<cr>'       , 'jump declaration'},
+    d = {'<cmd>lua vim.lsp.buf.definition()<cr>'        , 'Jump definition'},
+    r = {'<cmd>lua vim.lsp.buf.references()<cr>'        , 'Jump references'},
   },
 }, { prefix = "<leader>" })
