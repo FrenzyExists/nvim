@@ -53,7 +53,6 @@ saga.init_lsp_saga()
 
 -- Language server setup
 require'lspconfig'.efm.setup{}
-require'lspconfig'.pyright.setup{}
 require'lspconfig'.jsonls.setup{}
 require'lspconfig'.ccls.setup{}
 require'lspconfig'.texlab.setup{}
@@ -61,3 +60,4 @@ require'lspconfig'.beancount.setup{}
 require'lspconfig'.vls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
+require'lspconfig'.pyright.setup{}

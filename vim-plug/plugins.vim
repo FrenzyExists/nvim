@@ -50,6 +50,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'dhruvasagar/vim-table-mode'
   Plug 'tpope/vim-commentary'
   Plug 'vim-pandoc/vim-pandoc-syntax'
+  " this one for java
+  Plug 'mfussenegger/nvim-jdtls'
 
   " Debugging
   Plug 'puremourning/vimspector'
