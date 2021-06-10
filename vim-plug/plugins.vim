@@ -27,7 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
   Plug 'sainnhe/gruvbox-material'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
