@@ -16,7 +16,7 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 
 " Leetcode plugin
-let g:leetcode_browser = 'firefox'
+let g:leetcode_browser = 'chrome'
 let g:leetcode_solution_filetype = 'python3'
 let g:leetcode_hide_paid_only = 1
 let g:leetcode_hide_topics = 1
@@ -27,3 +27,5 @@ augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
+" disable line numbers for terminal
+autocmd TermOpen * setlocal nonumber norelativenumber

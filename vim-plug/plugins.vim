@@ -19,11 +19,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ianding1/leetcode.vim'
 
   " Better tabline
-  Plug 'romgrk/barbar.nvim'
+  " Plug 'romgrk/barbar.nvim'
+
+  " alternative to tabline
+  Plug 'ThePrimeagen/harpoon'
 
   " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
   Plug 'sainnhe/gruvbox-material'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'

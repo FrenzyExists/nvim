@@ -43,12 +43,23 @@ wk.register({
     L = { "<cmd>Telescope git_commits<cr>", "Log" },
     s = { "<cmd>Git<cr>", "Status" },
   },
+  h = {
+    name = "+Harpoon", -- optional group name
+    a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "harpoon file" },
+    s = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "files list" },
+    t = { "<cmd>lua require('harpoon.term').gotoTerminal(1)<cr>", "files list" },
+    ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "file one" },
+    ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "file two" },
+    ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "file three" },
+    ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "file four" },
+
+  },
   k = {
     name = "+Task", -- optional group name
     c = { "<cmd>AsyncTask file-compile<cr>", "Compile file" },
     C = { "<cmd>make clean<cr>", "Make clean" },
     b = { "<cmd>AsyncTask project-build<cr>", "Build project" },
-    m = { "<cmd>!pandoc % -o %<.pdf --from markdown --template eisvogel --listings --toc --resource-path %:p:h && open %<.pdf<cr>", "Build Markdown PDF" },
+    m = { "<cmd>!pandoc % -o %<.pdf --from markdown --template eisvogel --listings --toc -F mermaid-filter --resource-path %:p:h && open %<.pdf<cr>", "Build Markdown PDF" },
     r = { "<cmd>AsyncTask file-run<cr>", "Run file" },
     p = { "<cmd>AsyncTask project-run<cr>", "Run project" },
   },
@@ -103,10 +114,5 @@ wk.register({
     n = {'<cmd>terminal node<cr>'                              , 'node'},
     p = {'<cmd>terminal python<cr>'                            , 'python'},
   },
-  j = {
-    name = "+Jump", -- optional group name
-    D = {'<cmd>lua vim.lsp.buf.declaration()<cr>'       , 'jump declaration'},
-    d = {'<cmd>lua vim.lsp.buf.definition()<cr>'        , 'Jump definition'},
-    r = {'<cmd>lua vim.lsp.buf.references()<cr>'        , 'Jump references'},
-  },
-}, { prefix = "<leader>" })
+},
+{ prefix = "<leader>" })

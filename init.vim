@@ -16,8 +16,9 @@ source $HOME/.config/nvim/themes/syntax.vim
 " Plugin Configuration
 luafile $HOME/.config/nvim/keys/which-key.lua
 luafile $HOME/.config/nvim/plug-config/lsp.lua
+luafile $HOME/.config/nvim/plug-config/treesitter.lua
 luafile $HOME/.config/nvim/plug-config/telescope.lua
-luafile $HOME/.config/nvim/themes/barbar.lua
+" luafile $HOME/.config/nvim/themes/barbar.lua
 source $HOME/.config/nvim/plug-config/asynctask.vim
 source $HOME/.config/nvim/plug-config/vim-rooter.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
