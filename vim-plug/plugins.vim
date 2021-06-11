@@ -28,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Language specific highlighting
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'mfussenegger/nvim-jdtls'
-  Plug 'mhartington/nvim-typescript'
+  Plug 'leafgarland/typescript-vim'
   " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
 
   " My Own Plugins

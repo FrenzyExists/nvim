@@ -27,5 +27,8 @@ augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
+" Typescript
+au BufRead,BufNewFile *.ts   setfiletype typescript
+
 " disable line numbers for terminal
 autocmd TermOpen * setlocal nonumber norelativenumber
