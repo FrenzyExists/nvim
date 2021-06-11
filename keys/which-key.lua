@@ -43,17 +43,6 @@ wk.register({
     L = { "<cmd>Telescope git_commits<cr>", "Log" },
     s = { "<cmd>Git<cr>", "Status" },
   },
-  h = {
-    name = "+Harpoon", -- optional group name
-    a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "harpoon file" },
-    s = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "files list" },
-    t = { "<cmd>lua require('harpoon.term').gotoTerminal(1)<cr>", "files list" },
-    ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "file one" },
-    ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "file two" },
-    ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "file three" },
-    ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "file four" },
-
-  },
   k = {
     name = "+Task", -- optional group name
     c = { "<cmd>AsyncTask file-compile<cr>", "Compile file" },
@@ -75,24 +64,24 @@ wk.register({
     l = { "<cmd>Telescope git_commits<cr>", "commit log" },
     u = { "<cmd>Telescope colorscheme<cr>", "colorschemes" },
   },
-    l = {
-        name = "+LSP",
-        a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
-        A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        i = {"<cmd>LspInfo<cr>", "Info"},
-        l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
-        L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
-        p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
-        q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
-        r = {"<cmd>Lspsaga rename<cr>", "Rename"},
-        t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
-        T = {"<cmd>Todo<cr>", "Todo"},
-        x = {"<cmd>cclose<cr>", "Close Quickfix"},
-        s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
-        S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
-    },
+  l = {
+      name = "+LSP",
+      a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+      A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
+      d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+      D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+      i = {"<cmd>LspInfo<cr>", "Info"},
+      l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
+      L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
+      p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
+      q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+      r = {"<cmd>Lspsaga rename<cr>", "Rename"},
+      t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
+      T = {"<cmd>Todo<cr>", "Todo"},
+      x = {"<cmd>cclose<cr>", "Close Quickfix"},
+      s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
+      S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
+  },
   L = {
     name = "+Leetcode", -- optional group name
     L = { "<cmd>LeetCodeList<cr>", "List questions" },
