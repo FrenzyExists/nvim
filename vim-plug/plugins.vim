@@ -18,16 +18,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Leetcode
   Plug 'ianding1/leetcode.vim'
 
-  " Better tabline
-  " Plug 'romgrk/barbar.nvim'
-
   " alternative to tabline
   Plug 'ThePrimeagen/harpoon'
 
   " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
-  Plug 'sainnhe/gruvbox-material'
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'sainnhe/gruvbox-material'
+
+  " Language specific highlighting
+  Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'mfussenegger/nvim-jdtls'
+  Plug 'mhartington/nvim-typescript'
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
@@ -40,27 +42,28 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/which-key.nvim'
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
-  Plug 'metakirby5/codi.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'kevinhwang91/nvim-bqf' " Quickfix previews
+  Plug 'kevinhwang91/nvim-bqf'
 
   " Completion
   Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/nvim-compe'
   Plug 'kabouzeid/nvim-lspinstall'
-  Plug 'glepnir/lspsaga.nvim'
+  Plug 'hrsh7th/nvim-compe'
   Plug 'tpope/vim-surround'
-  Plug 'dhruvasagar/vim-table-mode'
+  Plug 'glepnir/lspsaga.nvim'
   Plug 'tpope/vim-commentary'
-  Plug 'vim-pandoc/vim-pandoc-syntax'
-  " this one for java
-  Plug 'mfussenegger/nvim-jdtls'
+  Plug 'dhruvasagar/vim-table-mode'
 
-  " Debugging
+  " Debugging and compiling
   Plug 'puremourning/vimspector'
+  Plug 'skywind3000/asynctasks.vim'
+  Plug 'skywind3000/asyncrun.vim'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
   " Telescope + File tree
+  Plug 'airblade/vim-rooter'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
@@ -68,10 +71,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Buffers
   Plug 'szw/vim-maximizer'
-  Plug 'airblade/vim-rooter'
-  Plug 'skywind3000/asynctasks.vim'
-  Plug 'skywind3000/asyncrun.vim'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()

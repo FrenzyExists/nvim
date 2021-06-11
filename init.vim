@@ -17,6 +17,7 @@ source $HOME/.config/nvim/themes/syntax.vim
 luafile $HOME/.config/nvim/keys/which-key.lua
 luafile $HOME/.config/nvim/plug-config/lsp.lua
 luafile $HOME/.config/nvim/plug-config/telescope.lua
+" To slow on my mac to use treesitter
 " luafile $HOME/.config/nvim/plug-config/treesitter.lua
 source $HOME/.config/nvim/plug-config/asynctask.vim
 source $HOME/.config/nvim/plug-config/vim-rooter.vim
