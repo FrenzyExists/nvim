@@ -23,12 +23,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Grooooooovbox and other themes
   Plug 'gruvbox-community/gruvbox'
+  Plug 'sainnhe/gruvbox-material'
 
-  " Language specific highlighting
-  Plug 'vim-pandoc/vim-pandoc-syntax'
-  Plug 'mfussenegger/nvim-jdtls'
-  Plug 'leafgarland/typescript-vim'
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
+  " Better syntax highlighting
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
