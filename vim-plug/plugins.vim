@@ -60,7 +60,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
   " Telescope + File tree
-  Plug 'airblade/vim-rooter'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'

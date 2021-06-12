@@ -14,10 +14,6 @@ imap <ESC> <C-c>
 vnoremap < <gv
 vnoremap > >gv
 
-" paste from last yank (ignore deletes)
-nmap ,p "0p
-nmap ,P "0P
-
 " Move selected line / block of text in visual mode
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
