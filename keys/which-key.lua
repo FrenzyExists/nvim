@@ -3,7 +3,7 @@ wk.register({
   e = { "<cmd>NvimTreeToggle<cr>", "File explorer"},
   f = { "<cmd>Telescope find_files<cr>", "Find Files"},
   h = { "<C-W>s", "Horizontal Split"},
-  v = { "<C-W>v", "Vertical Split"},
+  v = { "<cmd>call OpenFileInSplit()<cr>", "vertical split"},
   a = {
     name = "+Actions", -- optional group name
     m = { "<cmd>MarkdownPreview<cr>", "Markdown Preview" },
@@ -14,7 +14,6 @@ wk.register({
   },
   b = {
     name = "+Buffer", -- optional group name
-    c = { "<cmd>call CloseAllBuffersButCurrent()<cr>", "Close Other Buffers" },
     d = { "<cmd>bd<cr>", "Delete Buffer" },
     n = { "<cmd>bnext<cr>", "Next Buffer" },
     p = { "<cmd>bprevious<cr>", "Previous Buffer" },
@@ -99,7 +98,7 @@ wk.register({
   },
   t = {
     name = "+Toggle", -- optional group name
-    t = {'<cmd>sp term://zsh<cr>'                              , 'terminal'},
+    t = {'<cmd>call OpenSmallTerminal()<cr>'                       , 'terminal'},
     n = {'<cmd>terminal node<cr>'                              , 'node'},
     p = {'<cmd>terminal python<cr>'                            , 'python'},
   },

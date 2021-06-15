@@ -20,7 +20,6 @@ luafile $HOME/.config/nvim/plug-config/telescope.lua
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
 source $HOME/.config/nvim/plug-config/asynctask.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
-" source $HOME/.config/nvim/plug-config/vim-rooter.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/other-plugins.vim
 

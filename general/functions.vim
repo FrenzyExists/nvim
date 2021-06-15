@@ -2,11 +2,15 @@ augroup auto_spellcheck
   autocmd BufNewFile,BufRead *.md setlocal spell
 augroup END
 
-function! CloseAllBuffersButCurrent()
-  let curr = bufnr("%")
-  let last = bufnr("$")
-  if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
-  if curr < last | silent! execute (curr+1).",".last."bd" | endif
+function! OpenFileInSplit()
+  vsplit
+  Telescope find_files
+endfunction
+
+function! OpenSmallTerminal()
+  split
+  term
+  resize 10
 endfunction
 
 autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
