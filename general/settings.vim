@@ -32,7 +32,9 @@ set noea                                " stop vim from equalising winows
 set noshowmode
 set noruler
 set laststatus=0
+set noshowcmd
 set cmdheight=1
+set shortmess+=c
 
 " set guifont="FiraCode Nerd Font Mono:h16"
 
