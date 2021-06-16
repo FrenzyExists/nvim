@@ -25,6 +25,10 @@ let g:leetcode_hide_companies = 1
 augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
-"
+
 " disable line numbers for terminals in vim
 autocmd TermOpen * setlocal nonumber norelativenumber
+
+" Setting status line
+let g:tpipeline_statusline = '%!tpipeline#stl#line()'
+let g:tpipeline_statusline = '%f'

@@ -10,7 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Status Line
   Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'KaraMCC/vim-streamline'
+  " Plug 'KaraMCC/vim-streamline'
+  Plug 'vimpostor/vim-tpipeline'
 
   " Navigation with Kitty
   Plug 'christoomey/vim-tmux-navigator'

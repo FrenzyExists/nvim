@@ -3,7 +3,6 @@ set nocompatible
 set title
 set nofoldenable
 let &titlestring='%t - Vim'             " for kitty/vim keybinds to work, needs to remname to a common title
-" set hidden
 set nowrap                              " Display long lines as just one line
 set number                              " Displays the current line number of col"
 set buftype=
@@ -26,9 +25,14 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set nohlsearch
 set undofile
 set undodir=~/.vim/undo
-set cmdheight=1
 set noea                                " stop vim from equalising winows
-set timeout timeoutlen=200 ttimeoutlen=100
+" set timeout timeoutlen=200 ttimeoutlen=100
+
+" Setting status line to disapear
+set noshowmode
+set noruler
+set laststatus=0
+set cmdheight=1
 
 " set guifont="FiraCode Nerd Font Mono:h16"
 
