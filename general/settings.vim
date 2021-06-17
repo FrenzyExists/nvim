@@ -1,6 +1,7 @@
 syntax on                               " Enables syntax highlighing
 set nocompatible
 set title
+set hidden
 set nofoldenable
 let &titlestring='%t - Vim'             " for kitty/vim keybinds to work, needs to remname to a common title
 set nowrap                              " Display long lines as just one line
@@ -15,6 +16,7 @@ set expandtab
 set smarttab
 set autoindent                          " Good auto indent
 set smartindent                         " Makes indenting smart
+set timeoutlen=250
 set relativenumber
 set cursorline                          " Enable highlighting of the current line
 set nobackup                            " This is recommended by coc
@@ -26,16 +28,11 @@ set nohlsearch
 set undofile
 set undodir=~/.vim/undo
 set noea                                " stop vim from equalising winows
-" set timeout timeoutlen=200 ttimeoutlen=100
-
-" Setting status line to disapear
 set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
 set cmdheight=1
 set shortmess+=c
-
-" set guifont="FiraCode Nerd Font Mono:h16"
 
 filetype plugin indent on
