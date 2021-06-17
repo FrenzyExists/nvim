@@ -22,11 +22,3 @@ source $HOME/.config/nvim/plug-config/asynctask.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/other-plugins.vim
-
-if has('nvim-0.5')
-  " LSP for java to run server
-  augroup lsp
-    au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'jdtls.sh'}, root_dir = require('jdtls.setup').find_root({'gradle.build', 'pom.xml'})})
-  augroup end
-endif
