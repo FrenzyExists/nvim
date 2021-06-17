@@ -43,6 +43,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kshenoy/vim-signature'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'kevinhwang91/nvim-bqf'
+  Plug 'mbbill/undotree'
 
   " Completion
   Plug 'neovim/nvim-lspconfig'

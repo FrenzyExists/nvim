@@ -24,6 +24,7 @@ wk.register({
     s = { "<cmd>let @/ = ''<cr>", "Remove Highlight" },
     t = { "<cmd>TableModeToggle<cr>", "Table Mode" },
     w = { "<cmd>StripWhitespace<cr>", "Remove Whitespace" },
+    u = { "<cmd>UndotreeToggle<cr>", "Remove Whitespace" },
   },
   b = {
     name = "+Buffer", -- optional group name
