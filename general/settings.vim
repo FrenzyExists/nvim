@@ -16,7 +16,6 @@ set expandtab
 set smarttab
 set autoindent                          " Good auto indent
 set smartindent                         " Makes indenting smart
-set timeoutlen=250
 set relativenumber
 set cursorline                          " Enable highlighting of the current line
 set nobackup                            " This is recommended by coc
@@ -34,5 +33,6 @@ set laststatus=0
 set noshowcmd
 set cmdheight=1
 set shortmess+=c
+set timeout timeoutlen=200 ttimeoutlen=100
 
 filetype plugin indent on
