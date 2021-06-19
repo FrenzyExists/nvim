@@ -10,7 +10,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Status Line
   Plug 'kyazdani42/nvim-web-devicons'
-  " Plug 'KaraMCC/vim-streamline'
   Plug 'vimpostor/vim-tpipeline'
 
   " Navigation with Kitty
@@ -23,8 +22,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ThePrimeagen/harpoon'
 
   " Grooooooovbox and other themes
-  Plug 'gruvbox-community/gruvbox'
   Plug 'sainnhe/gruvbox-material'
+  Plug 'arcticicestudio/nord-vim'
 
   " Better syntax highlighting
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future

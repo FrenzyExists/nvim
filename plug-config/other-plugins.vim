@@ -30,5 +30,6 @@ augroup END
 autocmd TermOpen * setlocal nonumber norelativenumber
 
 " Setting status line
-let g:tpipeline_statusline = '%!tpipeline#stl#line()'
-let g:tpipeline_statusline = '%f'
+hi MyGrey guifg=#d5c4a1 guibg=#504945
+let g:tpipeline_statusline = '%#MyGrey# %f '
+let g:tpipeline_preservebg = 1

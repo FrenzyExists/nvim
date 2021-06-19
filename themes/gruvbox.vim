@@ -45,5 +45,4 @@ highlight! link TSConstructor Orange
 highlight! link TSFuncMacro Blue
 highlight! link TSFuncBuiltin Orange
 highlight! link TSFunction Green
-highlight! link TSMethod BlueBold
-
+highlight! link TSMethod Green

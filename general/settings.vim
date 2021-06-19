@@ -33,6 +33,7 @@ set laststatus=0
 set noshowcmd
 set cmdheight=1
 set shortmess+=c
-set timeout timeoutlen=200 ttimeoutlen=100
+set timeout timeoutlen=250 ttimeoutlen=100
+set updatetime=300
 
 filetype plugin indent on
