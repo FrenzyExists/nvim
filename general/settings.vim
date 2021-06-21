@@ -14,8 +14,9 @@ set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set expandtab
 set smarttab
-set autoindent                          " Good auto indent
-set smartindent                         " Makes indenting smart
+" set autoindent                          " Good auto indent
+" set cindent
+" set smartindent                         " Makes indenting smart
 set relativenumber
 set cursorline                          " Enable highlighting of the current line
 set nobackup                            " This is recommended by coc

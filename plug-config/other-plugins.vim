@@ -31,5 +31,19 @@ autocmd TermOpen * setlocal nonumber norelativenumber
 
 " Setting status line
 hi MyGrey guifg=#d5c4a1 guibg=#504945
-let g:tpipeline_statusline = '%#MyGrey# %f '
+let g:tpipeline_statusline = '%#MyGrey# %t '
 let g:tpipeline_preservebg = 1
+
+" LSP objective-C setup
+if executable('sourcekit-lsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'sourcekit-lsp',
+        \ 'cmd': {server_info->['sourcekit-lsp']},
+        \ 'whitelist': ['swift'],
+        \ })
+endif
+
+augroup filetype
+  au! BufRead,BufNewFile *.swift set ft=swift
+augroup END
+
