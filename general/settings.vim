@@ -28,13 +28,16 @@ set nohlsearch
 set undofile
 set undodir=~/.vim/undo
 set noea                                " stop vim from equalising winows
+set lazyredraw                          " make macros faster to render
+" set synmaxcol=1
+" set syntax=
 set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
 set cmdheight=1
 set shortmess+=c
-set timeout timeoutlen=250 ttimeoutlen=100
-set updatetime=300
+" set timeout timeoutlen=250 ttimeoutlen=100
+" set updatetime=300
 
 filetype plugin indent on

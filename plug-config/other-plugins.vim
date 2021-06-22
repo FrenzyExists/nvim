@@ -1,11 +1,6 @@
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 let g:python3_host_prog = "/usr/local/opt/python@3.9/libexec/bin/python"
 
-" Marks
-let g:showmarks_auto_toggle = []
-let g:showmarks_no_mappings = 1
-let g:showmarks_hlline_lower = 1
-
 " Tmux navigation in vim
 let g:tmux_navigator_no_mappings = 1
 
@@ -21,10 +16,7 @@ let g:leetcode_hide_paid_only = 1
 let g:leetcode_hide_topics = 1
 let g:leetcode_hide_companies = 1
 
-" Markdown pandoc
-augroup pandoc_syntax
-  au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
-augroup END
+let g:table_mode_disable_mappings = 1
 
 " disable line numbers for terminals in vim
 autocmd TermOpen * setlocal nonumber norelativenumber
@@ -45,5 +37,6 @@ endif
 
 augroup filetype
   au! BufRead,BufNewFile *.swift set ft=swift
+  au! BufRead,BufNewFile *.mm set ft=objc
 augroup END
 

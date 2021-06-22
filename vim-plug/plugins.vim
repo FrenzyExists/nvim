@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Better syntax highlighting
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
+  Plug 'SolaWing/vim-objc-syntax'
 
   " My Own Plugins
   Plug 'atidyshirt/todo.vim'
@@ -36,12 +37,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Visual
   Plug 'folke/which-key.nvim'
-  Plug 'kien/rainbow_parentheses.vim'
   Plug 'unblevable/quick-scope'
-  Plug 'kshenoy/vim-signature'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'kevinhwang91/nvim-bqf'
-  Plug 'mbbill/undotree'
 
   " Completion
   Plug 'neovim/nvim-lspconfig'
@@ -57,8 +55,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'puremourning/vimspector'
   Plug 'skywind3000/asynctasks.vim'
   Plug 'skywind3000/asyncrun.vim'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
   " Telescope + File tree
   Plug 'nvim-lua/popup.nvim'

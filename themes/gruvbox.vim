@@ -32,12 +32,6 @@ if &term == "screen-256color"
    set t_Co=256
 endif
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" Treesitter - gruvbox-material changes
 highlight! link TSConstBuiltin BlueItalic
 highlight! link TSConstMacro BlueItalic
 highlight! link TSConstant PurpleItalic

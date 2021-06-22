@@ -103,16 +103,9 @@ wk.register({
     r = { "<cmd>LeetCodeReset<cr>", "Reset answer" },
     S = { "<cmd>LeetCodeSignIn<cr>", "Sign in" },
   },
-  m = {
-    name = "+Marks", -- optional group name
-    c = { "<cmd>delm! | delm A-Z0-9a-z | SignatureRefresh<cr>", "Clear marks" },
-    f = { "<cmd>SignatureListBufferMarks<cr>", "Local marks" },
-    g = { "<cmd>SignatureListGlobalMarks<cr>", "Global marks" },
-    v = { "<cmd>SignatureToggleSigns<cr>", "Visual marks" },
-  },
   t = {
     name = "+Toggle", -- optional group name
-    t = {'<cmd>call OpenSmallTerminal()<cr>'                       , 'terminal'},
+    t = {'<cmd>call OpenSmallTerminal()<cr>'                   , 'terminal'},
     n = {'<cmd>terminal node<cr>'                              , 'node'},
     p = {'<cmd>terminal python<cr>'                            , 'python'},
   },
