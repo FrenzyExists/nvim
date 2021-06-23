@@ -1,1 +1,1 @@
-source /Users/atidyshirt/.config/nvim/themes/gruvbox.vim
+source /Users/atidyshirt/.config/nvim/themes/soil.vim

@@ -1,6 +1,6 @@
 let g:nvim_tree_side = 'left' "left by default
 let g:nvim_tree_width = 30 "30 by default
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache', '__pycache__' ] "empty by default
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache', '.ccls-cache', '__pycache__' ] "empty by default
 let g:nvim_tree_gitignore = 1 "0 by default
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
