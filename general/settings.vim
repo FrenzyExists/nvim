@@ -14,11 +14,11 @@ set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set expandtab
 set smarttab
-" set autoindent                          " Good auto indent
-" set cindent
-" set smartindent                         " Makes indenting smart
+set autoindent                          " Good auto indent
+set cindent
+set smartindent                         " Makes indenting smart
 set relativenumber
-set cursorline                          " Enable highlighting of the current line
+" set cursorline                          " Enable highlighting of the current line
 set nobackup                            " This is recommended by coc
 set noswapfile
 set nowritebackup                       " This is recommended by coc
@@ -29,15 +29,13 @@ set undofile
 set undodir=~/.vim/undo
 set noea                                " stop vim from equalising winows
 set lazyredraw                          " make macros faster to render
-" set synmaxcol=1
-" set syntax=
 set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
 set cmdheight=1
 set shortmess+=c
-" set timeout timeoutlen=250 ttimeoutlen=100
-" set updatetime=300
+set timeout timeoutlen=250 ttimeoutlen=100
+set updatetime=300
 
 filetype plugin indent on
