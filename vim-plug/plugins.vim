@@ -21,9 +21,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " alternative to tabline
   Plug 'ThePrimeagen/harpoon'
 
-  " Grooooooovbox and other themes
-  Plug 'sainnhe/gruvbox-material'
-  Plug 'gruvbox-community/gruvbox'
+  " Grooooooovbox
+  " This is a fork of gruvbox-community/gruvbox, updated to use
+  " gruvbox-material colors, due to the better plugin support and
+  " treesitter intergration.
+  Plug 'atidyshirt/gruvbox'
 
   " Better syntax highlighting
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
