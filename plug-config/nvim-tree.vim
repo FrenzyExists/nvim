@@ -1,6 +1,6 @@
 let g:nvim_tree_side = 'left'
 let g:nvim_tree_width = 25
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache', '.ccls-cache', '__pycache__' ]
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache', '.ccls-cache', '__pycache__', '.vim', '.tasks', '.DS_Store' ]
 let g:nvim_tree_gitignore = 1
 let g:nvim_tree_git_hl = 1
 let g:nvim_tree_root_folder_modifier = ':e:r'

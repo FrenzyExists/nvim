@@ -18,7 +18,7 @@ set autoindent                          " Good auto indent
 set cindent
 set smartindent                         " Makes indenting smart
 set relativenumber
-" set cursorline                          " Enable highlighting of the current line
+set cursorline                          " Enable highlighting of the current line
 set nobackup                            " This is recommended by coc
 set noswapfile
 set nowritebackup                       " This is recommended by coc
