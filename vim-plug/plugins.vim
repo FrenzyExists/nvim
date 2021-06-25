@@ -23,6 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Grooooooovbox and other themes
   Plug 'sainnhe/gruvbox-material'
+  Plug 'gruvbox-community/gruvbox'
 
   " Better syntax highlighting
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
