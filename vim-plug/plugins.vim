@@ -43,6 +43,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'unblevable/quick-scope'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'kevinhwang91/nvim-bqf'
+  Plug 'folke/zen-mode.nvim'
+  Plug 'junegunn/limelight.vim'
+  Plug 'onsails/lspkind-nvim'
 
   " Completion
   Plug 'neovim/nvim-lspconfig'
@@ -53,6 +56,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'dhruvasagar/vim-table-mode'
   Plug 'ciaranm/detectindent'
+
+  " Snippets
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'rafamadriz/friendly-snippets'
+  Plug 'cohama/lexima.vim'
 
   " Debugging and compiling
   Plug 'puremourning/vimspector'

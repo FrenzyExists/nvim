@@ -8,7 +8,6 @@ nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-
 " Leetcode plugin
 let g:leetcode_browser = 'chrome'
 let g:leetcode_solution_filetype = 'python3'
@@ -40,3 +39,41 @@ augroup filetype
   au! BufRead,BufNewFile *.mm set ft=objc
 augroup END
 
+" Zenmode
+
+lua << EOF
+require("zen-mode").setup {
+  window = {
+    backdrop = 1, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+    width = 0.7, -- width of the Zen window
+    height = 0.75, -- height of the Zen window
+    options = {
+      signcolumn = "no", -- disable signcolumn
+      number = false, -- disable number column
+      relativenumber = false, -- disable relative numbers
+      cursorline = false, -- disable cursorline
+      list = true, -- enable/disable whitespace characters
+    },
+  },
+  plugins = {
+    options = {
+      enabled = true,
+      ruler = false, -- disables the ruler text in the cmd line area
+      showcmd = false, -- disables the command in the last line of the screen
+    },
+    gitsigns = { enabled = false }, -- disables git signs
+    tmux = { enabled = true }, -- disables the tmux statusline
+    kitty = {
+      enabled = false,
+    },
+  },
+  -- callback where you can add custom code when the Zen window opens
+  on_open = function(win)
+    vim.cmd('Limelight')
+  end,
+  -- callback where you can add custom code when the Zen window closes
+  on_close = function()
+    vim.cmd('Limelight!')
+  end,
+}
+EOF

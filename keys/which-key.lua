@@ -14,9 +14,10 @@ local wk = require("which-key")
 
 wk.register({
   e = { "<cmd>NvimTreeToggle<cr>", "File explorer"},
-  f = { "<cmd>Telescope find_files<cr>", "Find Files"},
+  f = { "<cmd>Telescope find_files<cr>", "Find files"},
   h = { "<C-W>s", "Horizontal Split"},
-  v = { "<cmd>call OpenFileInSplit()<cr>", "vertical split"},
+  v = { "<cmd>call OpenFileInSplit()<cr>", "Vertical split"},
+  z = { "<cmd>ZenMode<cr>", "Zen mode"},
   a = {
     name = "+Actions", -- optional group name
     m = { "<cmd>MarkdownPreview<cr>", "Markdown Preview" },

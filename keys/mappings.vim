@@ -37,12 +37,6 @@ inoremap <C-k> <C-\><C-N><C-w>k
 inoremap <C-l> <C-\><C-N><C-w>l
 tnoremap <Esc> <C-\><C-n>
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
-" Mapping GO commands
-
 " File navigation
 nnoremap <silent> gt <cmd>lua require('harpoon.term').gotoTerminal(1)<cr>
 nnoremap <silent> ga <cmd>lua require('harpoon.mark').add_file()<CR>
@@ -51,15 +45,3 @@ nnoremap <silent> g1 <cmd>lua require('harpoon.ui').nav_file(1)<cr>
 nnoremap <silent> g2 <cmd>lua require('harpoon.ui').nav_file(2)<cr>
 nnoremap <silent> g3 <cmd>lua require('harpoon.ui').nav_file(3)<cr>
 nnoremap <silent> g4 <cmd>lua require('harpoon.ui').nav_file(4)<cr>
-
-" Function Navigation
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-
-" Other lsp stuff
-nnoremap <silent> K :Lspsaga hover_doc<CR>
-nnoremap <silent> <C-d> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
-nnoremap <silent> <C-u> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
-

@@ -37,5 +37,6 @@ set cmdheight=1
 set shortmess+=c
 set timeout timeoutlen=250 ttimeoutlen=100
 set updatetime=300
+set completeopt=menuone,noselect
 
 filetype plugin indent on
