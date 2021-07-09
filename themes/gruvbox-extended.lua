@@ -2,12 +2,12 @@ local cmd = vim.cmd
 
 local colors = {
     white = "#d4be98",
-    darker_black = "#262626",
+    darker_black = "#2b2b2b",
     black = "#282828", --  nvim bg
-    black2 = "#262626",
-    one_bg = "#262626",
-    one_bg2 = "#262626",
-    one_bg3 = "#262626",
+    black2 = "#2b2b2b",
+    one_bg = "#2b2b2b",
+    one_bg2 = "#2b2b2b",
+    one_bg3 = "#2b2b2b",
     grey = "#46494a",
     grey_fg = "#5d6061",
     grey_fg2 = "#5b5e5f",
@@ -80,7 +80,7 @@ bg("PmenuSel", green)
 bg("PmenuThumb", nord_blue)
 
 -- inactive statuslines as thin splitlines
-cmd("hi! StatusLineNC gui=underline guifg=" .. line)
+-- cmd("hi! StatusLineNC gui=underline guifg=" .. line)
 
 -- line n.o
 cmd "hi clear CursorLine"
@@ -126,13 +126,3 @@ fg("LspDiagnosticsVirtualTextHint", purple)
 fg_bg("BufferLineSeparator", black2, black2)
 fg_bg("BufferLineSeparatorVisible", black2, black2)
 fg_bg("BufferLineSeparatorSelected", black, black2)
-
--- modified buffers
-fg_bg("BufferLineModified", red, black2)
-fg_bg("BufferLineModifiedVisible", red, black2)
-fg_bg("BufferLineModifiedSelected", green, black)
-
--- close buttons
-fg_bg("BufferLineCLoseButtonVisible", light_grey, black2)
-fg_bg("BufferLineCLoseButton", light_grey, black2)
-fg_bg("BufferLineCLoseButtonSelected", red, black)

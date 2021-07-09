@@ -21,7 +21,7 @@ let g:table_mode_disable_mappings = 1
 autocmd TermOpen * setlocal nonumber norelativenumber
 
 " Setting status line
-hi MyGrey guifg=#d5c4a1 guibg=#504945
+hi MyGrey guifg=#d5c4a1 guibg=#2b2b2b
 let g:tpipeline_statusline = '%#MyGrey# %t '
 let g:tpipeline_preservebg = 1
 
