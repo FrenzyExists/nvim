@@ -16,7 +16,7 @@ set expandtab
 set smarttab
 set autoindent                          " Good auto indent
 set cindent
-set smartindent                         " Makes indenting smart
+" set smartindent                         " Makes indenting smart
 set relativenumber
 set cursorline                          " Enable highlighting of the current line
 set nobackup                            " This is recommended by coc

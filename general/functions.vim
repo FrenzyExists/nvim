@@ -11,6 +11,7 @@ function! OpenSmallTerminal()
   split
   term
   resize 10
+  wincmd J
 endfunction
 
 autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>

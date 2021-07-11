@@ -6,6 +6,8 @@ let g:nvim_tree_git_hl = 1
 let g:nvim_tree_root_folder_modifier = ':e:r'
 let g:nvim_tree_width_allow_resize  = 1
 let g:nvim_tree_update_cwd = 1
+let g:nvim_tree_disable_netrw = 0
+let g:nvim_tree_hijack_netrw = 0
 
 let g:nvim_tree_window_picker_exclude = {
     \   'filetype': [
