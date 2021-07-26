@@ -10,7 +10,7 @@ endfunction
 function! OpenSmallTerminal()
   split
   term
-  resize 10
+  resize 8
   wincmd J
 endfunction
 

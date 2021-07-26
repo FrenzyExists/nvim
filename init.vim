@@ -13,7 +13,6 @@ source $HOME/.config/nvim/keys/mappings.vim
 " Theme
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/themes/syntax.vim
-luafile $HOME/.config/nvim/themes/gruvbox-extended.lua
 
 " Plugin Configuration
 luafile $HOME/.config/nvim/keys/which-key.lua

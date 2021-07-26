@@ -20,11 +20,6 @@ let g:table_mode_disable_mappings = 1
 " disable line numbers for terminals in vim
 autocmd TermOpen * setlocal nonumber norelativenumber
 
-" Setting status line
-hi MyGrey guifg=#d5c4a1 guibg=#2b2b2b
-let g:tpipeline_statusline = '%#MyGrey# %t '
-let g:tpipeline_preservebg = 1
-
 " LSP objective-C setup
 if executable('sourcekit-lsp')
     au User lsp_setup call lsp#register_server({
@@ -77,3 +72,6 @@ require("zen-mode").setup {
   end,
 }
 EOF
+
+" Refactoring
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}

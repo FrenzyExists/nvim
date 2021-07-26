@@ -18,17 +18,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Leetcode
   Plug 'ianding1/leetcode.vim'
 
-  " alternative to tabline
+  " Prime's elite plugins
   Plug 'ThePrimeagen/harpoon'
+  Plug 'ThePrimeagen/refactoring.nvim'
 
   " Grooooooovbox
   " This is a fork of gruvbox-community/gruvbox, updated to use
   " gruvbox-material colors, due to the better plugin support and
   " treesitter intergration.
   Plug 'atidyshirt/gruvbox'
+  Plug 'atidyshirt/rosebox.nvim'
+  Plug 'joshdick/onedark.vim'
 
   " Better syntax highlighting
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
+  Plug 'nvim-treesitter/playground'
   Plug 'SolaWing/vim-objc-syntax'
 
   " My Own Plugins
@@ -73,6 +77,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'kyazdani42/nvim-tree.lua'
+
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
   " Buffers
   Plug 'szw/vim-maximizer'

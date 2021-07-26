@@ -164,6 +164,7 @@ require'lspconfig'.vls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.hie.setup{}
 
 -- better navigation
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')

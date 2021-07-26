@@ -11,16 +11,22 @@ if &term == "screen-256color" || &term == "tmux-256color" || &term == "screen" |
     map! <esc>[1;5C <C-Right>
 endif
 
-let g:gruvbox_italic = 1
-let g:gruvbox_bold = 1
-let g:gruvbox_italicize_comments = 1
-let g:gruvbox_contrast_dark = 'medium'
-let g:gruvbox_termcolors = 256
+" let g:gruvbox_italic = 1
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italicize_comments = 1
+" let g:gruvbox_contrast_dark = 'medium'
+" let g:gruvbox_termcolors = 256
 
-colorscheme gruvbox
+" Setting status line for TMUX
+hi MyGrey guifg=#d5c4a1 guibg=#2b2b2b
+let g:tpipeline_statusline = '%#MyGrey# %t '
+let g:tpipeline_preservebg = 1
+
+colorscheme rosebox
 set background=dark
 
 if &term == "screen-256color"
    set t_Co=256
 endif
 
+" luafile $HOME/.config/nvim/themes/gruvbox-extended.lua
