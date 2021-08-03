@@ -23,7 +23,6 @@ wk.register({
     m = { "<cmd>MarkdownPreview<cr>", "Markdown Preview" },
     M = { "<cmd>MarkdownPreviewStop<cr>", "Markdown Preview Stop" },
     s = { "<cmd>let @/ = ''<cr>", "Remove Highlight" },
-    t = { "<cmd>TableModeToggle<cr>", "Table Mode" },
     w = { "<cmd>StripWhitespace<cr>", "Remove Whitespace" },
     u = { "<cmd>UndotreeToggle<cr>", "Remove Whitespace" },
   },

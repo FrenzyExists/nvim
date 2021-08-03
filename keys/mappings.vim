@@ -45,3 +45,6 @@ nnoremap <silent> g1 <cmd>lua require('harpoon.ui').nav_file(1)<cr>
 nnoremap <silent> g2 <cmd>lua require('harpoon.ui').nav_file(2)<cr>
 nnoremap <silent> g3 <cmd>lua require('harpoon.ui').nav_file(3)<cr>
 nnoremap <silent> g4 <cmd>lua require('harpoon.ui').nav_file(4)<cr>
+
+" Substatution
+nmap ss <plug>(SubversiveSubstitute)

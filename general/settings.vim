@@ -2,7 +2,6 @@ syntax on                               " Enables syntax highlighing
 set nocompatible
 set title
 set hidden
-set nofoldenable
 let &titlestring='%t - Vim'             " for kitty/vim keybinds to work, needs to remname to a common title
 set nowrap                              " Display long lines as just one line
 set number                              " Displays the current line number of col"
@@ -39,5 +38,10 @@ set shortmess+=c
 set timeout timeoutlen=250 ttimeoutlen=100
 set updatetime=300
 set completeopt=menuone,noselect
+" Setting folds
+set foldmethod=indent
+set foldnestmax=1
+set nofoldenable
+set foldlevel=1
 
 filetype plugin indent on

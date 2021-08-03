@@ -22,13 +22,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ThePrimeagen/harpoon'
   Plug 'ThePrimeagen/refactoring.nvim'
 
-  " Grooooooovbox
-  " This is a fork of gruvbox-community/gruvbox, updated to use
-  " gruvbox-material colors, due to the better plugin support and
-  " treesitter intergration.
-  Plug 'atidyshirt/gruvbox'
+  " Themes
+  " Plug 'atidyshirt/gruvbox'
+  " Plug 'joshdick/onedark.vim'
   Plug 'atidyshirt/rosebox.nvim'
-  Plug 'joshdick/onedark.vim'
 
   " Better syntax highlighting
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
@@ -55,11 +52,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'kabouzeid/nvim-lspinstall'
   Plug 'hrsh7th/nvim-compe'
-  Plug 'tpope/vim-surround'
   Plug 'glepnir/lspsaga.nvim'
   Plug 'tpope/vim-commentary'
-  Plug 'dhruvasagar/vim-table-mode'
   Plug 'ciaranm/detectindent'
+
+  " Extended vim - these thing should be default
+  Plug 'tpope/vim-surround'
+  Plug 'svermeulen/vim-subversive'
+  Plug 'godlygeek/tabular'
 
   " Snippets
   Plug 'hrsh7th/vim-vsnip'
