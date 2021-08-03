@@ -61,7 +61,7 @@ wk.register({
     c = { "<cmd>AsyncTask file-compile<cr>", "Compile file" },
     C = { "<cmd>make clean<cr>", "Make clean" },
     b = { "<cmd>AsyncTask project-build<cr>", "Build project" },
-    m = { "<cmd>!pandoc % -o %<.pdf --from markdown --template eisvogel --listings --toc -F mermaid-filter --resource-path %:p:h && !zathura %<.pdf<cr>", "Build Markdown PDF" },
+    m = { "<cmd>!pandoc % -o %<.pdf --from markdown --template eisvogel --listings --toc -F mermaid-filter --resource-path %:p:h && zathura %<.pdf --fork<cr>", "Build Markdown PDF" },
     r = { "<cmd>AsyncTask file-run<cr>", "Run file" },
     p = { "<cmd>AsyncTask project-run<cr>", "Run project" },
   },
