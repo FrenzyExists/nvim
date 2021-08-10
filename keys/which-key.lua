@@ -6,17 +6,20 @@ require("which-key").setup {
     spacing = 3, -- spacing between columns
     align = "left", -- align columns left, center or right
   },
+  window = {
+    border = "single",
+  },
   show_help = false,
-  triggers = {"<leader>"} -- only enable on leader key
+  triggers = {"<leader>", "<leader>v"}, -- only enable on leader key
 }
+
 
 local wk = require("which-key")
 
 wk.register({
   e = { "<cmd>NvimTreeToggle<cr>", "File explorer"},
   f = { "<cmd>Telescope find_files<cr>", "Find files"},
-  h = { "<C-W>s", "Horizontal Split"},
-  v = { "<cmd>call OpenFileInSplit()<cr>", "Vertical split"},
+  m = { "<cmd>MaximizerToggle<cr>", "Maximise" },
   z = { "<cmd>ZenMode<cr>", "Zen mode"},
   a = {
     name = "+Actions", -- optional group name
@@ -24,14 +27,6 @@ wk.register({
     M = { "<cmd>MarkdownPreviewStop<cr>", "Markdown Preview Stop" },
     s = { "<cmd>let @/ = ''<cr>", "Remove Highlight" },
     w = { "<cmd>StripWhitespace<cr>", "Remove Whitespace" },
-    u = { "<cmd>UndotreeToggle<cr>", "Remove Whitespace" },
-  },
-  b = {
-    name = "+Buffer", -- optional group name
-    d = { "<cmd>bd<cr>", "Delete Buffer" },
-    n = { "<cmd>bnext<cr>", "Next Buffer" },
-    p = { "<cmd>bprevious<cr>", "Previous Buffer" },
-    m = { "<cmd>MaximizerToggle<cr>", "Maximise" },
   },
   d = {
     name = "+Debugger", -- optional group name
@@ -56,17 +51,9 @@ wk.register({
     L = { "<cmd>Telescope git_commits<cr>", "Log" },
     s = { "<cmd>Git<cr>", "Status" },
   },
-  k = {
-    name = "+Task", -- optional group name
-    c = { "<cmd>AsyncTask file-compile<cr>", "Compile file" },
-    C = { "<cmd>make clean<cr>", "Make clean" },
-    b = { "<cmd>AsyncTask project-build<cr>", "Build project" },
-    m = { "<cmd>!pandoc % -o %<.pdf --from markdown --template eisvogel --listings --toc -F mermaid-filter --resource-path %:p:h && zathura %<.pdf --fork<cr>", "Build Markdown PDF" },
-    r = { "<cmd>AsyncTask file-run<cr>", "Run file" },
-    p = { "<cmd>AsyncTask project-run<cr>", "Run project" },
-  },
   s = {
     name = "+Search", -- optional group name
+    c = { "<cmd>lua require('telescope').extensions.asynctasks.all()<cr>", "build options" },
     f = { "<cmd>Telescope find_files<cr>", "files" },
     h = { "<cmd>Telescope command_history<cr>", "history" },
     i = { "<cmd>Telescope media_files<cr>", "media" },
@@ -78,31 +65,21 @@ wk.register({
     u = { "<cmd>Telescope colorscheme<cr>", "colorschemes" },
   },
   l = {
-      name = "+LSP",
-      a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
-      A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
-      d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-      D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-      e = {"<cmd>lua require('refactoring.106').extract()<cr>", "Extract local function"},
-      i = {"<cmd>LspInfo<cr>", "Info"},
-      l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
-      L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
-      p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
-      q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
-      r = {"<cmd>Lspsaga rename<cr>", "Rename"},
-      t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
-      T = {"<cmd>Todo<cr>", "Todo"},
-      x = {"<cmd>cclose<cr>", "Close Quickfix"},
-      s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
-      S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
-  },
-  L = {
-    name = "+Leetcode", -- optional group name
-    L = { "<cmd>LeetCodeList<cr>", "List questions" },
-    t = { "<cmd>LeetCodeTest<cr>", "Test answer" },
-    s = { "<cmd>LeetCodeSubmit<cr>", "Submit answer" },
-    r = { "<cmd>LeetCodeReset<cr>", "Reset answer" },
-    S = { "<cmd>LeetCodeSignIn<cr>", "Sign in" },
+    name = "+LSP",
+    a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+    A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
+    d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+    D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+    i = {"<cmd>LspInfo<cr>", "Info"},
+    l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
+    p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
+    q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+    r = {"<cmd>Lspsaga rename<cr>", "Rename"},
+    t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
+    T = {"<cmd>Todo<cr>", "Todo"},
+    x = {"<cmd>cclose<cr>", "Close Quickfix"},
+    s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
+    S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
   },
   t = {
     name = "+Toggle", -- optional group name

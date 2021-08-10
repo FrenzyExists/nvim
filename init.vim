@@ -11,14 +11,18 @@ source $HOME/.config/nvim/general/functions.vim
 source $HOME/.config/nvim/keys/mappings.vim
 
 " Theme
-source $HOME/.config/nvim/themes/rosebox.vim
+source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/themes/syntax.vim
 
 " Plugin Configuration
+
+" Lua
 luafile $HOME/.config/nvim/keys/which-key.lua
 luafile $HOME/.config/nvim/plug-config/lsp.lua
 luafile $HOME/.config/nvim/plug-config/telescope.lua
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
+
+" VimL
 source $HOME/.config/nvim/plug-config/asynctask.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
