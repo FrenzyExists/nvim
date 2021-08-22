@@ -9,12 +9,6 @@ nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " Leetcode plugin
-let g:leetcode_browser = 'chrome'
-let g:leetcode_solution_filetype = 'python3'
-let g:leetcode_hide_paid_only = 1
-let g:leetcode_hide_topics = 1
-let g:leetcode_hide_companies = 1
-
 let g:table_mode_disable_mappings = 1
 
 " disable line numbers for terminals in vim

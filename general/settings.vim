@@ -45,6 +45,3 @@ set nofoldenable
 set foldlevel=1
 
 filetype plugin indent on
-
-" Autoformatting on save (slow on mac for some reason)
-" au BufWrite * :Autoformat

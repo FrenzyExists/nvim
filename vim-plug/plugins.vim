@@ -51,7 +51,6 @@ Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'tpope/vim-commentary'
-Plug 'ciaranm/detectindent'
 
 " Extended vim - these thing should be default
 Plug 'tpope/vim-surround'
