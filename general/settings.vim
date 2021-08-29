@@ -38,10 +38,12 @@ set shortmess+=c
 set timeout timeoutlen=250 ttimeoutlen=100
 set updatetime=300
 set completeopt=menuone,noselect
-" Setting folds
 set foldmethod=indent
-set foldnestmax=1
+set foldnestmax=3
 set nofoldenable
-set foldlevel=1
+set foldlevel=3
+
+" Neovide
+set guifont=FiraCode\ Nerd\ Font\ Mono:h16
 
 filetype plugin indent on

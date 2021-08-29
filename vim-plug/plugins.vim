@@ -44,6 +44,7 @@ Plug 'folke/zen-mode.nvim'
 Plug 'junegunn/limelight.vim'
 Plug 'onsails/lspkind-nvim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'p00f/nvim-ts-rainbow'
 
 " Completion
 Plug 'neovim/nvim-lspconfig'
