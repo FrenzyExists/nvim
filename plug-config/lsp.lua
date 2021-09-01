@@ -163,7 +163,7 @@ require'lspconfig'.beancount.setup{}
 require'lspconfig'.vls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
-require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.pyright.setup{}
 require'lspconfig'.hie.setup{}
 
 -- better navigation

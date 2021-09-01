@@ -7,7 +7,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
 " Status Line
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'vimpostor/vim-tpipeline'
@@ -27,9 +26,9 @@ Plug 'atidyshirt/rosebox.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " This to replace three above plugins in future
 Plug 'nvim-treesitter/playground'
 Plug 'SolaWing/vim-objc-syntax'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
-" My Own Plugins
-Plug 'atidyshirt/todo.vim'
 
 " Git
 Plug 'f-person/git-blame.nvim'
@@ -76,7 +75,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'GustavoKatel/telescope-asynctasks.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Quickfix Lists
+Plug 'folke/trouble.nvim'
+Plug 'folke/todo-comments.nvim'
 
 " Buffers
 Plug 'szw/vim-maximizer'

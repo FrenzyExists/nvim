@@ -75,8 +75,8 @@ wk.register({
     p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
     q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
     r = {"<cmd>Lspsaga rename<cr>", "Rename"},
-    t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
-    T = {"<cmd>Todo<cr>", "Todo"},
+    t = {"<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "Trouble"},
+    T = {"<cmd>TodoTrouble<cr>", "Todo"},
     x = {"<cmd>cclose<cr>", "Close Quickfix"},
     s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
     S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}

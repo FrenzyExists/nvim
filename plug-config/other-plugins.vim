@@ -11,6 +11,9 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " Leetcode plugin
 let g:table_mode_disable_mappings = 1
 
+" Pandoc support
+let g:pandoc#completion#bib#mode = 'citeproc'
+
 " disable line numbers for terminals in vim
 autocmd TermOpen * setlocal nonumber norelativenumber
 
@@ -101,6 +104,10 @@ M.refactors = function()
         end
     }):find()
 end
+
+-- Trouble plugin
+require("trouble").setup {}
+require("todo-comments").setup {}
 
 vim.api.nvim_set_keymap("v", "<Leader>re", [[ <Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("v", "<Leader>rf", [[ <Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]], {noremap = true, silent = true, expr = false})
