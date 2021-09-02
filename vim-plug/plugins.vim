@@ -7,11 +7,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-" Status Line
+" Incons
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'vimpostor/vim-tpipeline'
 
-" Navigation with Kitty
+" Navigation and Intergration with Tmux
+Plug 'vimpostor/vim-tpipeline'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Prime's elite plugins
@@ -28,7 +28,6 @@ Plug 'nvim-treesitter/playground'
 Plug 'SolaWing/vim-objc-syntax'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-
 
 " Git
 Plug 'f-person/git-blame.nvim'
@@ -69,7 +68,6 @@ Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 
 " Telescope + File tree
-Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'GustavoKatel/telescope-asynctasks.nvim'
